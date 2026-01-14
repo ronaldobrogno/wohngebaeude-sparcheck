@@ -1,322 +1,329 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Wohngebäudeversicherung Vergleich 2026 – Sparpotenzial bis zu 40% prüfen</title>
-  <meta name="description" content="Zahlen Sie zu viel für Ihre Wohngebäudeversicherung? Prüfen Sie Ihr Sparpotenzial (typisch 10–30%, in Einzelfällen bis 40% möglich). Kostenloser Vergleich in 2 Minuten – unverbindlich."/>
-  <link rel="canonical" href="https://DEINE-DOMAIN.DE/"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wohngebäudeversicherung Vergleich 2026 – Sparpotenzial prüfen (bis zu 40%)</title>
+  <meta name="description" content="Wohngebäudeversicherung vergleichen & Sparpotenzial prüfen: typischerweise 10–30%, in Einzelfällen bis zu 40%. Kostenloser Spar-Check in 2 Minuten." />
 
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Wohngebäudeversicherung Vergleich 2026 – Sparpotenzial prüfen"/>
-  <meta property="og:description" content="Kostenloser Vergleich: Beitrag senken ohne Schutzlücke. Ergebnis per E-Mail anfordern."/>
-  <meta property="og:url" content="https://DEINE-DOMAIN.DE/"/>
-  <meta property="og:locale" content="de_DE"/>
+  <!-- Vorschau-Modus: nicht indexieren -->
+  <meta name="robots" content="noindex,nofollow" />
 
-  <link rel="stylesheet" href="assets/style.css"/>
+  <link rel="canonical" href="https://example.com/" />
+  <link rel="stylesheet" href="assets/style.css" />
   <script defer src="assets/app.js"></script>
 
-  <!-- Organization Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Wohngebäude-SparCheck",
-    "url":"https://DEINE-DOMAIN.DE/",
-    "description":"Vergleich & Spar-Check für Wohngebäudeversicherungen – kostenlos & unverbindlich.",
-    "sameAs":[]
-  }
-  </script>
+  <meta property="og:title" content="Wohngebäudeversicherung Vergleich 2026 – Sparpotenzial prüfen" />
+  <meta property="og:description" content="Kostenloser Spar-Check: typischerweise 10–30%, in Einzelfällen bis zu 40% sparen." />
+  <meta property="og:type" content="website" />
 
-  <!-- FAQ Schema (Auszug) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"Kann ich bei der Wohngebäudeversicherung wirklich sparen?",
-        "acceptedAnswer":{"@type":"Answer","text":"Ja – je nach PLZ, Baujahr, Wohnfläche, Vorschäden, Deckung und Selbstbeteiligung ist ein Preisvorteil möglich. Typisch sind 10–30%, in Einzelfällen bis 40%."}
-      },
-      {
-        "@type":"Question",
-        "name":"Welche Schäden deckt die Wohngebäudeversicherung ab?",
-        "acceptedAnswer":{"@type":"Answer","text":"Kernbausteine sind Feuer, Leitungswasser sowie Sturm & Hagel. Elementarschäden (z. B. Starkregen/Überschwemmung/Rückstau) sind meist ein Zusatzbaustein."}
-      }
+      {"@type":"Question","name":"Welche Wohngebäudeversicherung ist die beste?","acceptedAnswer":{"@type":"Answer","text":"Die beste Wohngebäudeversicherung passt zum Gebäude (Wert 1914/gleitender Neuwert, Elementar-Risiko, grobe Fahrlässigkeit, Leitungswasser und Sturm/Hagel) und vermeidet Unterversicherung."}},
+      {"@type":"Question","name":"Wird die Wohngebäudeversicherung 2026 teurer?","acceptedAnswer":{"@type":"Answer","text":"In vielen Tarifen steigen Beiträge durch Baukosten-/Neuwertfaktoren und Schadenentwicklung. Ein Vergleich kann helfen, Beitrag und Leistung neu auszubalancieren."}},
+      {"@type":"Question","name":"Ist Elementarschutz Pflicht?","acceptedAnswer":{"@type":"Answer","text":"Eine generelle Pflicht gibt es meist nicht, aber in vielen Regionen ist Elementar sinnvoll (Starkregen, Überschwemmung, Rückstau)."}}
     ]
   }
   </script>
 </head>
 
 <body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html">
-        <div class="logo" aria-hidden="true"></div>
-        <strong>Wohngebäude-SparCheck</strong>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.html" aria-label="Startseite">
+        <span class="brand__logo" aria-hidden="true"></span>
+        <span class="brand__name">Wohngebäude-SparCheck</span>
       </a>
-      <nav class="navlinks" aria-label="Hauptnavigation">
-        <a href="kosten.html">Kosten</a>
-        <a href="beitragserhoehung.html">Beitragserhöhung</a>
-        <a href="elementar.html">Elementar</a>
-        <a href="spezialfaelle.html">Spezialfälle</a>
-        <a class="js-open-funnel" href="#sparcheck">Spar-Check starten</a>
+
+      <nav class="nav">
+        <a class="nav__link" href="kosten.html">Kosten</a>
+        <a class="nav__link" href="beitragserhoehung.html">Beitragserhöhung</a>
+        <a class="nav__link" href="elementar.html">Elementar</a>
+        <a class="nav__link" href="spezialfaelle.html">Spezialfälle</a>
+        <button type="button" class="nav__cta" id="openSparCheckTop">Spar-Check starten</button>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <section class="hero" id="sparcheck">
-      <div class="grid-hero">
-        <div class="card">
-          <div class="badge">🏠 Vergleich & Spar-Check 2026</div>
-          <h1>Wohngebäudeversicherung vergleichen – Sparpotenzial prüfen</h1>
-          <p>
-            Viele Eigentümer zahlen mehr als nötig. Auf Basis Ihrer Angaben (PLZ, Gebäudetyp, Baujahr, Wohnfläche)
-            prüfen wir ein mögliches Sparpotenzial. <b>Typisch 10–30%</b>, in Einzelfällen <b>bis zu 40% möglich</b>.
-          </p>
+    <section class="hero">
+      <div class="hero__left card">
+        <div class="pill">🏠 Vergleich & Spar-Check 2026</div>
+        <h1>Wohngebäudeversicherung vergleichen – Sparpotenzial prüfen</h1>
+        <p class="lead">
+          Viele Eigentümer zahlen mehr als nötig. Auf Basis Ihrer Angaben (PLZ, Gebäudetyp, Baujahr, Wohnfläche)
+          prüfen wir ein mögliches Sparpotenzial. <strong>Typisch 10–30%</strong>, in Einzelfällen <strong>bis zu 40%</strong> möglich.
+        </p>
 
-          <div class="kpis">
-            <div class="kpi"><b>2 Minuten</b><span>Kurzer Spar-Check</span></div>
-            <div class="kpi"><b>Kostenlos</b><span>Unverbindliche Auswertung</span></div>
-            <div class="kpi"><b>Ohne Schutzlücke</b><span>Kernschutz im Blick</span></div>
+        <div class="grid3">
+          <div class="mini card--soft">
+            <div class="mini__title">2 Minuten</div>
+            <div class="mini__text">Kurzer Spar-Check</div>
           </div>
-
-          <div class="btnrow">
-            <a class="btn btn-primary js-open-funnel" href="#sparcheck">Spar-Check starten</a>
-            <a class="btn btn-ghost" href="beitragserhoehung.html">Beitragserhöhung? →</a>
+          <div class="mini card--soft">
+            <div class="mini__title">Kostenlos</div>
+            <div class="mini__text">Unverbindliche Auswertung</div>
           </div>
-
-          <div class="hr"></div>
-          <div class="note">
-            Hinweis: Das Sparpotenzial hängt u. a. von PLZ, Baujahr, Wohnfläche, Vorschäden, Deckung (inkl./exkl. Elementar) und Selbstbeteiligung ab.
+          <div class="mini card--soft">
+            <div class="mini__title">Ohne Schutzlücke</div>
+            <div class="mini__text">Kernschutz im Blick</div>
           </div>
         </div>
 
-        <div class="card">
-          <div class="badge">📉 Schnell-Rechner (Orientierung)</div>
-          <p class="small">Aktueller Jahresbeitrag (z. B. 800):</p>
-          <div class="formgrid">
-            <div class="field">
-              <input id="currentPremium" type="number" min="0" placeholder="800"/>
-              <div class="small" style="margin-top:8px" id="savingOutput"></div>
-            </div>
-            <div class="field">
-              <div class="pill highlight">🔥 Feuer</div>
-              <div class="pill highlight" style="margin-top:8px">💧 Leitungswasser</div>
-              <div class="pill highlight" style="margin-top:8px">🌪️ Sturm & Hagel</div>
-              <div class="pill" style="margin-top:8px">🌧️ Elementar (optional)</div>
-            </div>
-          </div>
+        <div class="ctaRow">
+          <button type="button" class="btn btn--primary" id="openSparCheck">Spar-Check starten</button>
+          <a class="btn btn--ghost" href="beitragserhoehung.html">Beitragserhöhung? →</a>
+        </div>
 
-          <div class="hr"></div>
-          <h2 style="margin:0 0 8px; font-size:20px;">Worauf wir beim Vergleich achten</h2>
-          <ul class="ul">
-            <li>passender Versicherungswert (z. B. <b>Wert 1914</b> / gleitender Neuwert)</li>
-            <li>Unterversicherung vermeiden (z. B. Unterversicherungsverzicht, wenn möglich)</li>
-            <li>Leistungsbausteine: grobe Fahrlässigkeit, Ableitungsrohre, Aufräum-/Abbruchkosten</li>
-          </ul>
+        <div class="note">
+          Hinweis: Das Sparpotenzial hängt u. a. von PLZ, Baujahr, Wohnfläche, Vorschäden, Deckung (inkl./exkl. Elementar)
+          und Selbstbeteiligung ab.
         </div>
       </div>
+
+      <aside class="hero__right card">
+        <div class="pill">🧮 Schnell-Rechner (Orientierung)</div>
+        <label class="label" for="annual">Aktueller Jahresbeitrag (z. B. 800):</label>
+        <input class="input" id="annual" type="number" inputmode="numeric" min="0" placeholder="800" value="800" />
+        <div class="tagRow">
+          <span class="tag">🔥 Feuer</span>
+          <span class="tag">💧 Leitungswasser</span>
+          <span class="tag">🌪️ Sturm & Hagel</span>
+          <span class="tag tag--muted">🌧️ Elementar (optional)</span>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2 class="h2">Worauf wir beim Vergleich achten</h2>
+        <ul class="list">
+          <li>passender Versicherungswert (z. B. <strong>Wert 1914</strong> / gleitender Neuwert)</li>
+          <li>Unterversicherung vermeiden (z. B. Unterversicherungsverzicht, wenn möglich)</li>
+          <li>Leistungsbausteine: grobe Fahrlässigkeit, Ableitungsrohre, Aufräum-/Abbruchkosten</li>
+          <li>Elementarrisiko: Starkregen/Rückstau/Überschwemmung je nach Region</li>
+        </ul>
+      </aside>
     </section>
 
-    <section class="section">
-      <div class="cols">
-        <div class="card">
-          <h2>💶 Kosten & Beitrag</h2>
-          <p>Wie berechnet sich der Beitrag – und welche Faktoren treiben ihn hoch?</p>
-          <div class="btnrow"><a class="btn btn-ghost" href="kosten.html">Kosten verstehen</a></div>
-        </div>
-        <div class="card">
-          <h2>📈 Beitragserhöhung</h2>
-          <p>Viele suchen genau dann nach Alternativen. Sonderkündigung & Wechselhilfe.</p>
-          <div class="btnrow"><a class="btn btn-ghost" href="beitragserhoehung.html">Jetzt prüfen</a></div>
-        </div>
-        <div class="card">
-          <h2>🌧️ Elementar</h2>
-          <p>Starkregen, Rückstau, Überschwemmung: wann lohnt sich der Zusatzbaustein?</p>
-          <div class="btnrow"><a class="btn btn-ghost" href="elementar.html">Elementar-Guide</a></div>
-        </div>
-      </div>
+    <section class="cards">
+      <a class="card linkCard" href="kosten.html">
+        <h3>💸 Kosten & Beitrag</h3>
+        <p>Wie berechnet sich der Beitrag – und welche Faktoren treiben ihn hoch?</p>
+        <span class="btn btn--ghost">Kosten verstehen</span>
+      </a>
+
+      <a class="card linkCard" href="beitragserhoehung.html">
+        <h3>📈 Beitragserhöhung</h3>
+        <p>Viele suchen genau dann nach Alternativen. Sonderkündigung & Wechselhilfe.</p>
+        <span class="btn btn--ghost">Jetzt prüfen</span>
+      </a>
+
+      <a class="card linkCard" href="elementar.html">
+        <h3>🌧️ Elementar</h3>
+        <p>Starkregen, Rückstau, Überschwemmung: wann lohnt sich der Zusatzbaustein?</p>
+        <span class="btn btn--ghost">Elementar-Guide</span>
+      </a>
     </section>
 
-    <section class="section faq">
+    <section class="faq">
       <h2>Häufige Fragen</h2>
-      <details>
+
+      <details class="faqItem">
         <summary>Welche Wohngebäudeversicherung ist „die beste“?</summary>
-        <p>Das hängt von Objekt, PLZ/Risiko, Baujahr und gewünschten Leistungen ab. Sinnvoll ist ein Vergleich nach Leistungsumfang (Feuer/Leitungswasser/Sturm/Hagel + ggf. Elementar) und sauberer Wertermittlung (Wert 1914 / gleitender Neuwert).</p>
+        <p>
+          Die „beste“ ist die, die Ihr Gebäude korrekt bewertet (Wert 1914/gleitender Neuwert) und Unterversicherung vermeidet,
+          während sie Ihre wichtigsten Risiken (Leitungswasser, Sturm/Hagel, Feuer; ggf. Elementar) sauber abdeckt.
+        </p>
       </details>
-      <details>
+
+      <details class="faqItem">
         <summary>Wird die Wohngebäudeversicherung 2026 teurer?</summary>
-        <p>Beiträge können steigen – u. a. durch Anpassungsfaktoren/Neuwertfaktoren, Schadenentwicklung und regionale Risiken. Bei einer Erhöhung lohnt sich oft ein strukturierter Vergleich und ggf. Wechselprüfung.</p>
+        <p>
+          Beiträge können durch Baukosten-/Neuwertfaktoren und die Schadenentwicklung steigen. Ein Vergleich kann helfen,
+          Beitrag und Leistungsumfang neu zu optimieren – ohne Schutzlücke.
+        </p>
       </details>
-      <details>
+
+      <details class="faqItem">
         <summary>Ist Elementarschutz Pflicht?</summary>
-        <p>In der Regel nicht – aber in vielen Regionen ist er sehr empfehlenswert. Entscheidend sind Starkregen-/Rückstaurisiko, Lage und Schutzmaßnahmen am Gebäude.</p>
+        <p>
+          Meist gibt es keine generelle Pflicht. In vielen Regionen ist Elementar jedoch sinnvoll (Starkregen, Rückstau, Überschwemmung),
+          besonders wenn Ihr Risiko laut ZÜRS/Zonen höher ist.
+        </p>
       </details>
-      <div class="btnrow">
-        <a class="btn btn-primary js-open-funnel" href="#sparcheck">Spar-Check starten</a>
-        <a class="btn btn-ghost" href="spezialfaelle.html">Spezialfälle ansehen</a>
+
+      <div class="ctaRow">
+        <button type="button" class="btn btn--primary" id="openSparCheckBottom">Spar-Check starten</button>
+        <a class="btn btn--ghost" href="spezialfaelle.html">Spezialfälle ansehen</a>
       </div>
     </section>
-
-    <footer class="footer">
-      <div class="inline">
-        <span>© <span id="y"></span> Wohngebäude-SparCheck · <a href="#" onclick="alert('Impressum/Datenschutz als eigene Seiten ergänzen.');return false;">Impressum</a> · <a href="#" onclick="alert('Datenschutz als eigene Seite ergänzen.');return false;">Datenschutz</a></span>
-        <span class="small">GitHub Pages Ready</span>
-      </div>
-      <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-    </footer>
   </main>
 
-  <!-- Funnel Modal -->
-  <div class="modal" id="funnelModal" aria-hidden="true">
-    <div class="modal-inner card" id="funnelTop">
-      <div class="inline">
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© 2026 Wohngebäude-SparCheck</div>
+      <div class="footer__links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+      <div class="muted">Vorschau-Modus (noindex)</div>
+    </div>
+  </footer>
+
+  <!-- MODAL / FUNNEL -->
+  <div class="modal" id="sparcheckModal" aria-hidden="true">
+    <div class="modal__overlay" data-close></div>
+
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="sparTitle">
+      <div class="modal__head">
         <div>
-          <div class="badge">✅ Spar-Check (kostenlos & unverbindlich)</div>
-          <div class="small">Bitte kurz ausfüllen – wir senden Ihnen die Auswertung.</div>
+          <div class="modal__kicker">✅ Spar-Check (kostenlos & unverbindlich)</div>
+          <h2 id="sparTitle" class="modal__title">Bitte kurz ausfüllen – wir senden Ihnen die Auswertung</h2>
         </div>
-        <button class="close" id="closeFunnel">Schließen</button>
+        <button type="button" class="iconBtn" data-close aria-label="Schließen">✕</button>
       </div>
 
-      <div class="stepper" aria-label="Schritte">
-        <div class="stepdot active"></div>
-        <div class="stepdot"></div>
-        <div class="stepdot"></div>
-        <div class="stepdot"></div>
-      </div>
-
-      <form id="leadForm" method="POST" action="FORM_ENDPOINT_HERE">
-        <!-- Step 1 -->
-        <div class="fstep">
-          <div class="formgrid">
-            <div class="field">
-              <label for="buildingType">Gebäudetyp</label>
-              <select id="buildingType" name="Gebaeudetyp" required>
-                <option value="">Bitte wählen…</option>
-                <option>Einfamilienhaus (EFH)</option>
-                <option>Doppelhaushälfte (DHH)</option>
-                <option>Reihenhaus</option>
-                <option>Mehrfamilienhaus (MFH)</option>
-                <option>WEG / Eigentümergemeinschaft</option>
-                <option>Ferien-/Wochenendhaus</option>
-              </select>
-              <div class="error" id="err_buildingType"></div>
-            </div>
-            <div class="field">
-              <label for="plz">PLZ</label>
-              <input id="plz" name="PLZ" inputmode="numeric" placeholder="z. B. 10115" required/>
-              <div class="error" id="err_plz"></div>
-            </div>
-          </div>
-
-          <div class="btnrow">
-            <button class="btn btn-primary js-next">Weiter</button>
-          </div>
+      <div class="steps">
+        <div class="stepBar">
+          <div class="stepDot is-active" data-dot="1"></div>
+          <div class="stepDot" data-dot="2"></div>
+          <div class="stepDot" data-dot="3"></div>
+          <div class="stepDot" data-dot="4"></div>
+          <div class="stepDot" data-dot="5"></div>
+          <div class="stepDot" data-dot="6"></div>
         </div>
 
-        <!-- Step 2 -->
-        <div class="fstep" style="display:none">
-          <div class="formgrid">
-            <div class="field">
-              <label for="baujahr">Baujahr</label>
-              <input id="baujahr" name="Baujahr" type="number" placeholder="z. B. 1998" required/>
-              <div class="error" id="err_baujahr"></div>
+        <form id="leadForm" class="form" method="POST" action="https://formspree.io/f/DEINCODE">
+          <section class="step is-active" data-step="1">
+            <label class="label">Gebäudetyp</label>
+            <select class="input" name="gebaeudetyp" id="gebaeudetyp" required>
+              <option value="">Bitte wählen…</option>
+              <option>Einfamilienhaus (EFH)</option>
+              <option>Doppelhaushälfte (DHH)</option>
+              <option>Reihenhaus</option>
+              <option>Mehrfamilienhaus (MFH)</option>
+              <option>Ferien-/Wochenendhaus</option>
+              <option>Fachwerkhaus</option>
+              <option>Denkmalgeschützte Immobilie</option>
+              <option>Reetdachhaus</option>
+              <option>Sonstiges</option>
+            </select>
+            <div class="err" data-err="gebaeudetyp"></div>
+            <div class="stepNav">
+              <button type="button" class="btn btn--primary" data-next>Weiter</button>
             </div>
-            <div class="field">
-              <label for="wohnflaeche">Wohnfläche (m²)</label>
-              <input id="wohnflaeche" name="Wohnflaeche" type="number" placeholder="z. B. 120" required/>
-              <div class="error" id="err_wohnflaeche"></div>
-            </div>
-          </div>
+          </section>
 
-          <div class="btnrow">
-            <button class="btn btn-ghost js-back">Zurück</button>
-            <button class="btn btn-primary js-next">Weiter</button>
-          </div>
-        </div>
+          <section class="step" data-step="2">
+            <label class="label">PLZ</label>
+            <input class="input" name="plz" id="plz" inputmode="numeric" placeholder="z. B. 10115" required />
+            <div class="err" data-err="plz"></div>
+            <div class="stepNav">
+              <button type="button" class="btn btn--ghost" data-back>Zurück</button>
+              <button type="button" class="btn btn--primary" data-next>Weiter</button>
+            </div>
+          </section>
 
-        <!-- Step 3 -->
-        <div class="fstep" style="display:none">
-          <div class="formgrid">
-            <div class="field">
-              <label for="provider">Aktueller Anbieter (optional)</label>
-              <input id="provider" name="Aktueller_Anbieter" placeholder="z. B. HUK, Allianz, …"/>
-            </div>
-            <div class="field">
-              <label for="premium">Aktueller Jahresbeitrag (optional)</label>
-              <input id="premium" name="Aktueller_Beitrag" type="number" placeholder="z. B. 800"/>
-            </div>
-            <div class="field">
-              <label for="elementar">Elementarschutz gewünscht?</label>
-              <select id="elementar" name="Elementar">
-                <option>Unsicher</option>
-                <option>Ja</option>
-                <option>Nein</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="notes">Hinweis (optional)</label>
-              <input id="notes" name="Hinweis" placeholder="z. B. Beitragserhöhung erhalten, Vorschaden, …"/>
-            </div>
-          </div>
+          <section class="step" data-step="3">
+            <label class="label">Baujahr</label>
+            <input class="input" name="baujahr" id="baujahr" inputmode="numeric" placeholder="z. B. 1998" required />
+            <div class="err" data-err="baujahr"></div>
 
-          <div class="note" style="margin-top:10px">
-            Wir prüfen passende Tarife inkl. Kernschutz (Feuer/Leitungswasser/Sturm/Hagel). Preisvorteile sind abhängig von individuellen Faktoren.
-          </div>
+            <label class="label" style="margin-top:12px;">Wohnfläche (m²)</label>
+            <input class="input" name="wohnflaeche" id="wohnflaeche" inputmode="numeric" placeholder="z. B. 120" required />
+            <div class="err" data-err="wohnflaeche"></div>
 
-          <div class="btnrow">
-            <button class="btn btn-ghost js-back">Zurück</button>
-            <button class="btn btn-primary js-next">Weiter</button>
-          </div>
-        </div>
+            <div class="stepNav">
+              <button type="button" class="btn btn--ghost" data-back>Zurück</button>
+              <button type="button" class="btn btn--primary" data-next>Weiter</button>
+            </div>
+          </section>
 
-        <!-- Step 4 Lead -->
-        <div class="fstep" style="display:none">
-          <div class="badge">✅ Ergebnis bereit</div>
-          <p class="small">Wir senden Ihnen die Auswertung per E-Mail. Bitte Kontaktdaten eingeben:</p>
+          <section class="step" data-step="4">
+            <label class="label">Aktueller Anbieter (optional)</label>
+            <input class="input" name="aktueller_anbieter" id="anbieter" placeholder="z. B. HUK, Allianz, AXA…" />
 
-          <div class="formgrid">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="Name" placeholder="Vor- und Nachname" required/>
-              <div class="error" id="err_name"></div>
+            <label class="label" style="margin-top:12px;">Aktueller Jahresbeitrag (optional)</label>
+            <input class="input" name="jahresbeitrag" id="jahresbeitrag" inputmode="numeric" placeholder="z. B. 800" />
+
+            <label class="label" style="margin-top:12px;">Elementar aktuell enthalten?</label>
+            <select class="input" name="elementar" id="elementarSel">
+              <option value="">Bitte wählen…</option>
+              <option value="ja">Ja</option>
+              <option value="nein">Nein</option>
+              <option value="unsicher">Weiß ich nicht</option>
+            </select>
+
+            <div class="stepNav">
+              <button type="button" class="btn btn--ghost" data-back>Zurück</button>
+              <button type="button" class="btn btn--primary" data-next>Weiter</button>
             </div>
-            <div class="field">
-              <label for="email">E-Mail</label>
-              <input id="email" name="Email" type="email" placeholder="name@mail.de" required/>
-              <div class="error" id="err_email"></div>
-            </div>
-            <div class="field">
-              <label for="phone">Telefon</label>
-              <input id="phone" name="Telefon" inputmode="tel" placeholder="+49 …" required/>
-              <div class="error" id="err_phone"></div>
-            </div>
-            <div class="field">
-              <label>&nbsp;</label>
-              <div class="note">
-                <label style="display:flex; gap:10px; align-items:flex-start; cursor:pointer;">
-                  <input id="gdpr" type="checkbox" style="margin-top:4px"/>
-                  <span>Ich stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu (Datenschutz).</span>
-                </label>
-                <div class="error" id="err_gdpr"></div>
+          </section>
+
+          <section class="step" data-step="5">
+            <div class="resultBox">
+              <div class="resultBox__title">📍 Ergebnis-Hinweis</div>
+              <div class="resultBox__text">
+                Wir haben ein Sparpotenzial für Ihre PLZ gefunden. Wohin dürfen wir den Vergleich senden?
               </div>
             </div>
-          </div>
 
-          <input type="hidden" name="Quelle" value="GitHub-Pages-SparCheck"/>
-          <div class="btnrow">
-            <button class="btn btn-ghost js-back" type="button">Zurück</button>
-            <button class="btn btn-primary js-next" type="submit">Vergleich anfordern</button>
-          </div>
+            <label class="label">Name</label>
+            <input class="input" name="name" id="name" placeholder="Vor- und Nachname" required />
+            <div class="err" data-err="name"></div>
 
-          <div class="small" style="margin-top:10px">
-            Hinweis: Keine Rechtsberatung. Ergebnisse sind indikativ; das konkrete Angebot hängt von Tarif- und Risikoprüfung ab.
-          </div>
+            <label class="label" style="margin-top:12px;">E-Mail</label>
+            <input class="input" name="email" id="email" type="email" placeholder="name@mail.de" required />
+            <div class="err" data-err="email"></div>
+
+            <label class="label" style="margin-top:12px;">Telefon</label>
+            <input class="input" name="telefon" id="telefon" inputmode="tel" placeholder="z. B. 0176 12345678" required />
+            <div class="err" data-err="telefon"></div>
+
+            <div class="stepNav">
+              <button type="button" class="btn btn--ghost" data-back>Zurück</button>
+              <button type="button" class="btn btn--primary" data-next>Weiter</button>
+            </div>
+          </section>
+
+          <section class="step" data-step="6">
+            <label class="check">
+              <input type="checkbox" id="dsgvo" required />
+              <span>
+                Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und bin einverstanden,
+                dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden.
+              </span>
+            </label>
+            <div class="err" data-err="dsgvo"></div>
+
+            <div class="muted" style="margin-top:10px;">
+              Hinweis: Das ist ein unverbindlicher Vergleich. Keine automatische Vertragsannahme.
+            </div>
+
+            <div class="stepNav">
+              <button type="button" class="btn btn--ghost" data-back>Zurück</button>
+              <button type="submit" class="btn btn--primary">Vergleich anfordern</button>
+            </div>
+
+            <div class="muted" style="margin-top:12px;">
+              (Für echte E-Mails später Formspree-Endpoint eintragen: <code>action="https://formspree.io/f/DEINCODE"</code>)
+            </div>
+          </section>
+
+          <input type="hidden" name="quelle" value="wohngebaeude-sparcheck-preview" />
+        </form>
+
+        <div class="thanks" id="thanks" hidden>
+          <h3>Danke! ✅</h3>
+          <p>Ihre Anfrage ist vorbereitet. (In der Vorschau wird nichts versendet.)</p>
+          <p class="muted">
+            Wenn Sie live gehen, Formspree-Endpoint setzen und <code>noindex</code> entfernen.
+          </p>
+          <button type="button" class="btn btn--primary" data-close>Schließen</button>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 </body>
