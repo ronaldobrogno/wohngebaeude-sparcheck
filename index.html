@@ -5,29 +5,300 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Wohngebäudeversicherung Vergleich 2026 – Sparpotenzial prüfen (bis zu 40%)</title>
   <meta name="description" content="Wohngebäudeversicherung vergleichen & Sparpotenzial prüfen: typischerweise 10–30%, in Einzelfällen bis zu 40%. Kostenloser Spar-Check in 2 Minuten." />
-
-  <!-- Vorschau-Modus: nicht indexieren -->
   <meta name="robots" content="noindex,nofollow" />
 
-  <link rel="canonical" href="https://example.com/" />
-  <link rel="stylesheet" href="assets/style.css" />
-  <script defer src="assets/app.js"></script>
+  <style>
+    :root{
+      --bg1:#050814;
+      --bg2:#071a2d;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --border: rgba(255,255,255,.12);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.65);
+      --accent1:#21d4fd;
+      --accent2:#b721ff;
+      --accent3:#18f0a5;
+      --shadow: 0 18px 70px rgba(0,0,0,.55);
+      --radius: 18px;
+      --radius2: 14px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      background:
+        radial-gradient(900px 420px at 25% 15%, rgba(33,212,253,.20), transparent 60%),
+        radial-gradient(900px 420px at 70% 20%, rgba(183,33,255,.18), transparent 60%),
+        radial-gradient(900px 420px at 50% 90%, rgba(24,240,165,.10), transparent 60%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+    }
+    a{color:rgba(140,220,255,.95); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1120px; margin:0 auto; padding:0 18px}
 
-  <meta property="og:title" content="Wohngebäudeversicherung Vergleich 2026 – Sparpotenzial prüfen" />
-  <meta property="og:description" content="Kostenloser Spar-Check: typischerweise 10–30%, in Einzelfällen bis zu 40% sparen." />
-  <meta property="og:type" content="website" />
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,.20);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .topbar__inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{display:flex; align-items:center; gap:10px}
+    .brand__logo{
+      width:34px; height:34px; border-radius:11px;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+    }
+    .brand__name{font-weight:700; letter-spacing:.2px}
 
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"Welche Wohngebäudeversicherung ist die beste?","acceptedAnswer":{"@type":"Answer","text":"Die beste Wohngebäudeversicherung passt zum Gebäude (Wert 1914/gleitender Neuwert, Elementar-Risiko, grobe Fahrlässigkeit, Leitungswasser und Sturm/Hagel) und vermeidet Unterversicherung."}},
-      {"@type":"Question","name":"Wird die Wohngebäudeversicherung 2026 teurer?","acceptedAnswer":{"@type":"Answer","text":"In vielen Tarifen steigen Beiträge durch Baukosten-/Neuwertfaktoren und Schadenentwicklung. Ein Vergleich kann helfen, Beitrag und Leistung neu auszubalancieren."}},
-      {"@type":"Question","name":"Ist Elementarschutz Pflicht?","acceptedAnswer":{"@type":"Answer","text":"Eine generelle Pflicht gibt es meist nicht, aber in vielen Regionen ist Elementar sinnvoll (Starkregen, Überschwemmung, Rückstau)."}}
-    ]
-  }
-  </script>
+    .nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .nav__link{
+      padding:10px 12px;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:999px;
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      font-size:14px;
+    }
+    .nav__link:hover{background: rgba(255,255,255,.06); text-decoration:none}
+    .nav__cta{
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:999px;
+      padding:10px 14px;
+      background: linear-gradient(135deg, rgba(33,212,253,.25), rgba(183,33,255,.18));
+      color:var(--text);
+      font-weight:700;
+      cursor:pointer;
+    }
+    .nav__cta:hover{filter:brightness(1.05)}
+
+    .card{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .card--soft{
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      padding:14px;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      padding:18px 0 10px;
+    }
+    .hero__left{padding:22px}
+    .hero__right{padding:22px}
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(24,240,165,.25);
+      background: rgba(24,240,165,.08);
+      color:rgba(220,255,245,.92);
+      font-size:13px;
+      margin-bottom:12px;
+    }
+
+    h1{margin:8px 0 10px; font-size:42px; line-height:1.08}
+    .lead{margin:0 0 16px; color:var(--muted); font-size:16px; line-height:1.55}
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+      margin:14px 0 14px;
+    }
+    .mini__title{font-weight:800; font-size:16px}
+    .mini__text{color:var(--muted); margin-top:4px; font-size:13px}
+
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 10px}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 14px;
+      border-radius: 12px;
+      border:1px solid rgba(255,255,255,.14);
+      cursor:pointer;
+      font-weight:700;
+      color:var(--text);
+      background: rgba(255,255,255,.04);
+    }
+    .btn:hover{filter:brightness(1.05); text-decoration:none}
+    .btn--primary{
+      border:none;
+      background: linear-gradient(135deg, rgba(33,212,253,.90), rgba(24,240,165,.70));
+      color: rgba(4,10,18,.95);
+    }
+    .btn--ghost{background: rgba(255,255,255,.03)}
+
+    .note{
+      margin-top:12px;
+      color: rgba(255,255,255,.60);
+      font-size:13px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      border-radius: 12px;
+      padding:12px;
+    }
+
+    .label{display:block; margin:10px 0 6px; color:rgba(255,255,255,.75); font-size:13px}
+    .input{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.22);
+      color: var(--text);
+      outline:none;
+    }
+    .input:focus{border-color: rgba(33,212,253,.55); box-shadow: 0 0 0 3px rgba(33,212,253,.15)}
+
+    .tagRow{display:flex; gap:8px; flex-wrap:wrap; margin:12px 0 0}
+    .tag{
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      font-size:13px;
+      color: rgba(255,255,255,.85);
+    }
+    .tag--muted{opacity:.75}
+
+    .hr{height:1px; background: rgba(255,255,255,.10); margin:16px 0}
+    .h2{font-size:18px; margin:0 0 8px}
+    .list{margin:0; padding-left:18px; color: rgba(255,255,255,.75); line-height:1.6}
+
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      padding:12px 0 10px;
+    }
+    .linkCard{padding:18px}
+    .linkCard h3{margin:0 0 8px}
+    .linkCard p{margin:0 0 12px; color: var(--muted); line-height:1.5}
+
+    .faq{padding:12px 0 28px}
+    .faq h2{margin:0 0 12px}
+    .faqItem{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      border-radius: 14px;
+      padding:12px 14px;
+      margin-bottom:10px;
+    }
+    .faqItem summary{cursor:pointer; font-weight:800}
+    .faqItem p{color: var(--muted); line-height:1.6}
+
+    .footer{
+      border-top:1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.18);
+    }
+    .footer__inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0; gap:10px; flex-wrap:wrap;
+    }
+    .footer__links{display:flex; gap:12px}
+    .muted{color:rgba(255,255,255,.60); font-size:13px}
+
+    /* MODAL */
+    .modal{position:fixed; inset:0; display:none; z-index:100}
+    .modal.is-open{display:block}
+    .modal__overlay{
+      position:absolute; inset:0;
+      background: rgba(0,0,0,.62);
+      backdrop-filter: blur(6px);
+    }
+    .modal__panel{
+      position:relative;
+      width:min(820px, calc(100% - 24px));
+      margin: 70px auto 24px;
+      border-radius: 18px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(10,14,28,.92);
+      box-shadow: 0 26px 120px rgba(0,0,0,.65);
+      padding: 18px;
+      max-height: calc(100vh - 94px);
+      overflow:auto;
+    }
+    .modal__head{
+      display:flex; justify-content:space-between; gap:12px; align-items:flex-start;
+      border-bottom:1px solid rgba(255,255,255,.10);
+      padding-bottom:12px;
+    }
+    .modal__kicker{color:rgba(24,240,165,.90); font-weight:800; font-size:13px}
+    .modal__title{margin:6px 0 0; font-size:18px}
+    .iconBtn{
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color:var(--text);
+      border-radius: 12px;
+      padding:10px 12px;
+      cursor:pointer;
+    }
+    .iconBtn:hover{filter:brightness(1.05)}
+
+    .stepBar{display:flex; gap:8px; padding:14px 0}
+    .stepDot{
+      height:8px; flex:1;
+      border-radius:999px;
+      background: rgba(255,255,255,.10);
+    }
+    .stepDot.is-active{background: linear-gradient(135deg, rgba(33,212,253,.95), rgba(24,240,165,.70))}
+
+    .form{margin-top:6px}
+    .step{display:none}
+    .step.is-active{display:block}
+
+    .stepNav{
+      display:flex; justify-content:space-between; gap:10px; margin-top:14px;
+    }
+    .err{color: rgba(255,140,140,.95); font-size:13px; margin-top:6px; min-height:18px}
+    .resultBox{
+      border:1px solid rgba(24,240,165,.18);
+      background: rgba(24,240,165,.08);
+      border-radius: 14px;
+      padding:12px;
+      margin-bottom:12px;
+    }
+    .resultBox__title{font-weight:900}
+    .resultBox__text{color: rgba(220,255,245,.85); margin-top:4px; line-height:1.45}
+    .check{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+    }
+    .check input{margin-top:3px}
+
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr}
+      h1{font-size:36px}
+      .cards{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .nav{justify-content:flex-start}
+      .modal__panel{margin-top:54px}
+    }
+  </style>
 </head>
 
 <body>
@@ -101,7 +372,7 @@
         <ul class="list">
           <li>passender Versicherungswert (z. B. <strong>Wert 1914</strong> / gleitender Neuwert)</li>
           <li>Unterversicherung vermeiden (z. B. Unterversicherungsverzicht, wenn möglich)</li>
-          <li>Leistungsbausteine: grobe Fahrlässigkeit, Ableitungsrohre, Aufräum-/Abbruchkosten</li>
+          <li>Leistungsbausteine: grobe Fahrlässigkeit, Rohre, Aufräum-/Abbruchkosten</li>
           <li>Elementarrisiko: Starkregen/Rückstau/Überschwemmung je nach Region</li>
         </ul>
       </aside>
@@ -131,27 +402,13 @@
       <h2>Häufige Fragen</h2>
 
       <details class="faqItem">
-        <summary>Welche Wohngebäudeversicherung ist „die beste“?</summary>
-        <p>
-          Die „beste“ ist die, die Ihr Gebäude korrekt bewertet (Wert 1914/gleitender Neuwert) und Unterversicherung vermeidet,
-          während sie Ihre wichtigsten Risiken (Leitungswasser, Sturm/Hagel, Feuer; ggf. Elementar) sauber abdeckt.
-        </p>
-      </details>
-
-      <details class="faqItem">
         <summary>Wird die Wohngebäudeversicherung 2026 teurer?</summary>
-        <p>
-          Beiträge können durch Baukosten-/Neuwertfaktoren und die Schadenentwicklung steigen. Ein Vergleich kann helfen,
-          Beitrag und Leistungsumfang neu zu optimieren – ohne Schutzlücke.
-        </p>
+        <p>Beiträge können durch Baukosten-/Neuwertfaktoren und Schadenentwicklung steigen. Ein Vergleich hilft, Beitrag und Leistung neu zu optimieren.</p>
       </details>
 
       <details class="faqItem">
         <summary>Ist Elementarschutz Pflicht?</summary>
-        <p>
-          Meist gibt es keine generelle Pflicht. In vielen Regionen ist Elementar jedoch sinnvoll (Starkregen, Rückstau, Überschwemmung),
-          besonders wenn Ihr Risiko laut ZÜRS/Zonen höher ist.
-        </p>
+        <p>Meist nicht generell. In vielen Regionen ist Elementar aber sinnvoll (Starkregen, Rückstau, Überschwemmung).</p>
       </details>
 
       <div class="ctaRow">
@@ -195,7 +452,7 @@
           <div class="stepDot" data-dot="6"></div>
         </div>
 
-        <form id="leadForm" class="form" method="POST" action="https://formspree.io/f/DEINCODE">
+        <form id="leadForm" class="form" method="POST" action="#">
           <section class="step is-active" data-step="1">
             <label class="label">Gebäudetyp</label>
             <select class="input" name="gebaeudetyp" id="gebaeudetyp" required>
@@ -299,32 +556,168 @@
             <div class="err" data-err="dsgvo"></div>
 
             <div class="muted" style="margin-top:10px;">
-              Hinweis: Das ist ein unverbindlicher Vergleich. Keine automatische Vertragsannahme.
+              Vorschau: Es wird nichts versendet.
             </div>
 
             <div class="stepNav">
               <button type="button" class="btn btn--ghost" data-back>Zurück</button>
               <button type="submit" class="btn btn--primary">Vergleich anfordern</button>
             </div>
-
-            <div class="muted" style="margin-top:12px;">
-              (Für echte E-Mails später Formspree-Endpoint eintragen: <code>action="https://formspree.io/f/DEINCODE"</code>)
-            </div>
           </section>
-
-          <input type="hidden" name="quelle" value="wohngebaeude-sparcheck-preview" />
         </form>
 
         <div class="thanks" id="thanks" hidden>
           <h3>Danke! ✅</h3>
-          <p>Ihre Anfrage ist vorbereitet. (In der Vorschau wird nichts versendet.)</p>
-          <p class="muted">
-            Wenn Sie live gehen, Formspree-Endpoint setzen und <code>noindex</code> entfernen.
-          </p>
+          <p>Vorschau-Modus: Anfrage ist vorbereitet (keine Übertragung).</p>
           <button type="button" class="btn btn--primary" data-close>Schließen</button>
         </div>
+
       </div>
     </div>
   </div>
+
+  <script>
+    (function(){
+      const qs = (s, el=document) => el.querySelector(s);
+      const qsa = (s, el=document) => Array.from(el.querySelectorAll(s));
+
+      const modal = qs("#sparcheckModal");
+      const form  = qs("#leadForm");
+      const thanks = qs("#thanks");
+
+      function openModal(){
+        if(!modal) return;
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden","false");
+        document.body.style.overflow="hidden";
+      }
+      function closeModal(){
+        if(!modal) return;
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden","true");
+        document.body.style.overflow="";
+      }
+
+      function setDot(step){
+        qsa(".stepDot").forEach(d=>d.classList.remove("is-active"));
+        const dot = qs(`.stepDot[data-dot="${step}"]`);
+        if(dot) dot.classList.add("is-active");
+      }
+      function setStep(step){
+        qsa(".step", modal).forEach(s=>s.classList.remove("is-active"));
+        const st = qs(`.step[data-step="${step}"]`, modal);
+        if(st) st.classList.add("is-active");
+        setDot(step);
+        const panel = qs(".modal__panel", modal);
+        if(panel) panel.scrollTop = 0;
+      }
+
+      function setErr(key,msg){
+        const box = qs(`[data-err="${key}"]`, modal);
+        if(box) box.textContent = msg || "";
+      }
+      function validPlz(v){ return /^[0-9]{5}$/.test(String(v||"").trim()); }
+      function validYear(v){
+        const n=Number(String(v||"").trim()), y=new Date().getFullYear();
+        return Number.isFinite(n) && n>=1600 && n<=y;
+      }
+      function validArea(v){
+        const n=Number(String(v||"").trim());
+        return Number.isFinite(n) && n>=10 && n<=2000;
+      }
+      function validName(v){
+        const s=String(v||"").trim();
+        return s.length>=3 && s.includes(" ");
+      }
+      function validEmail(v){ return /^\S+@\S+\.\S+$/.test(String(v||"").trim()); }
+      function validPhone(v){
+        const s=String(v||"").trim().replace(/\s+/g,"");
+        return /^[+0-9()\-]{7,}$/.test(s);
+      }
+
+      let currentStep = 1;
+
+      function validate(step){
+        ["gebaeudetyp","plz","baujahr","wohnflaeche","name","email","telefon","dsgvo"].forEach(k=>setErr(k,""));
+
+        if(step===1){
+          const v=qs("#gebaeudetyp")?.value;
+          if(!v){ setErr("gebaeudetyp","Bitte Gebäudetyp auswählen."); return false; }
+        }
+        if(step===2){
+          const v=qs("#plz")?.value;
+          if(!validPlz(v)){ setErr("plz","Bitte eine gültige 5-stellige PLZ eingeben."); return false; }
+        }
+        if(step===3){
+          const y=qs("#baujahr")?.value;
+          const a=qs("#wohnflaeche")?.value;
+          if(!validYear(y)){ setErr("baujahr","Bitte gültiges Baujahr eingeben (z. B. 1998)."); return false; }
+          if(!validArea(a)){ setErr("wohnflaeche","Bitte Wohnfläche in m² eingeben (z. B. 120)."); return false; }
+        }
+        if(step===5){
+          const n=qs("#name")?.value;
+          const e=qs("#email")?.value;
+          const t=qs("#telefon")?.value;
+          if(!validName(n)){ setErr("name","Bitte Vor- und Nachname eingeben."); return false; }
+          if(!validEmail(e)){ setErr("email","Bitte gültige E-Mail eingeben."); return false; }
+          if(!validPhone(t)){ setErr("telefon","Bitte gültige Telefonnummer eingeben."); return false; }
+        }
+        if(step===6){
+          const ok=qs("#dsgvo")?.checked;
+          if(!ok){ setErr("dsgvo","Bitte Datenschutz-Zustimmung setzen."); return false; }
+        }
+        return true;
+      }
+
+      // Open buttons (kein href="#" => kein Hochspringen)
+      ["#openSparCheck","#openSparCheckTop","#openSparCheckBottom"].forEach(sel=>{
+        const btn = qs(sel);
+        if(btn){
+          btn.addEventListener("click", (e)=>{
+            e.preventDefault();
+            currentStep = 1;
+            if(thanks) thanks.hidden = true;
+            if(form) form.style.display = "";
+            setStep(1);
+            openModal();
+          });
+        }
+      });
+
+      // Close
+      qsa("[data-close]", modal).forEach(el=>{
+        el.addEventListener("click", (e)=>{ e.preventDefault(); closeModal(); });
+      });
+      document.addEventListener("keydown",(e)=>{
+        if(e.key==="Escape" && modal?.classList.contains("is-open")) closeModal();
+      });
+
+      // Next/Back buttons (delegation)
+      if(form){
+        form.addEventListener("click",(e)=>{
+          const t = e.target;
+          if(t && t.hasAttribute("data-next")){
+            e.preventDefault();
+            if(!validate(currentStep)) return;
+            currentStep = Math.min(currentStep+1, 6);
+            setStep(currentStep);
+          }
+          if(t && t.hasAttribute("data-back")){
+            e.preventDefault();
+            currentStep = Math.max(currentStep-1, 1);
+            setStep(currentStep);
+          }
+        });
+
+        // Submit: Vorschau -> danke screen
+        form.addEventListener("submit",(e)=>{
+          e.preventDefault();
+          if(!validate(6)) return;
+          form.style.display="none";
+          if(thanks) thanks.hidden=false;
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
