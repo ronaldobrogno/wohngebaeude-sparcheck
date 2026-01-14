@@ -1,83 +1,55 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Wohngebäudeversicherung Kosten – Beitrag berechnen & senken</title>
-  <meta name="description" content="Was kostet eine Wohngebäudeversicherung? Faktoren: PLZ, Baujahr, Wohnfläche, Wert 1914, Deckung, Selbstbeteiligung, Elementar. Kosten senken mit Vergleich & Spar-Check."/>
-  <link rel="canonical" href="https://DEINE-DOMAIN.DE/kosten.html"/>
-  <link rel="stylesheet" href="assets/style.css"/>
-  <script defer src="assets/app.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kosten Wohngebäudeversicherung – Beitrag verstehen</title>
+  <meta name="description" content="Wie setzen sich Kosten einer Wohngebäudeversicherung zusammen? Wert 1914, gleitender Neuwert, Region, Baujahr, Selbstbehalt & Elementar." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html"><div class="logo"></div><strong>Wohngebäude-SparCheck</strong></a>
-    <nav class="navlinks">
-      <a href="index.html">Vergleich</a>
-      <a href="beitragserhoehung.html">Beitragserhöhung</a>
-      <a href="elementar.html">Elementar</a>
-      <a href="spezialfaelle.html">Spezialfälle</a>
-      <a class="js-open-funnel" href="index.html#sparcheck">Spar-Check</a>
-    </nav>
-  </div>
-</header>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.html"><span class="brand__logo"></span><span class="brand__name">Wohngebäude-SparCheck</span></a>
+      <nav class="nav">
+        <a class="nav__link" href="kosten.html">Kosten</a>
+        <a class="nav__link" href="beitragserhoehung.html">Beitragserhöhung</a>
+        <a class="nav__link" href="elementar.html">Elementar</a>
+        <a class="nav__link" href="spezialfaelle.html">Spezialfälle</a>
+        <a class="nav__link" href="index.html">Start</a>
+      </nav>
+    </div>
+  </header>
 
-<main class="container">
-  <section class="hero">
-    <div class="card">
-      <div class="badge">💶 Kosten & Beitrag</div>
-      <h1>Was kostet eine Wohngebäudeversicherung?</h1>
-      <p>Der Beitrag hängt stark vom Objekt und der Region ab. Entscheidend sind u. a. <b>PLZ</b>, <b>Baujahr</b>, <b>Wohnfläche</b>, Wertermittlung (z. B. <b>Wert 1914 / gleitender Neuwert</b>), gewünschte Leistungen und Selbstbeteiligung.</p>
+  <main class="container" style="padding:18px 0 28px;">
+    <div class="card" style="padding:22px;">
+      <div class="pill">💸 Kosten verstehen</div>
+      <h1 style="margin-top:8px;">Wie berechnet sich der Beitrag?</h1>
+      <p class="lead">Die Kosten hängen stark vom Gebäude, der Region und dem Versicherungswert ab. Wichtig ist: Unterversicherung vermeiden.</p>
 
-      <div class="btnrow">
-        <a class="btn btn-primary js-open-funnel" href="index.html#sparcheck">Kosten senken prüfen</a>
-        <a class="btn btn-ghost" href="beitragserhoehung.html">Bei Erhöhung wechseln →</a>
-      </div>
-
-      <div class="hr"></div>
-      <h2 style="font-size:20px;margin:0 0 8px">Preisfaktoren im Überblick</h2>
-      <ul class="ul">
-        <li><b>Region/PLZ:</b> Wetter-/Elementarrisiken, Schadenhäufigkeit</li>
-        <li><b>Gebäude:</b> Baujahr, Dachart (z. B. Reet), Sanierungsstand, Leitungen</li>
-        <li><b>Versicherungswert:</b> Wert 1914, Bruttogrundfläche, gleitender Neuwertfaktor</li>
-        <li><b>Deckung:</b> grobe Fahrlässigkeit, Ableitungsrohre, Aufräum-/Abbruchkosten</li>
-        <li><b>Elementar:</b> Starkregen, Rückstau, Überschwemmung (Zusatz)</li>
+      <h2 class="h2">Die wichtigsten Preistreiber</h2>
+      <ul class="list">
+        <li><strong>Versicherungswert</strong> (Wert 1914 / gleitender Neuwertfaktor)</li>
+        <li><strong>Wohnfläche / Bruttogrundfläche</strong> und Bauweise</li>
+        <li><strong>Region</strong> (z. B. Sturm-/Leitungswasser-Risiko) und Schadenhistorie</li>
+        <li><strong>Elementar</strong> (Starkregen, Überschwemmung, Rückstau)</li>
+        <li><strong>Selbstbeteiligung</strong> & Leistungsumfang (Rohre, grobe Fahrlässigkeit, Nebenkosten)</li>
       </ul>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="cols">
-      <div class="card">
-        <h2>Rechenbeispiel</h2>
-        <p>Nutze den Schnell-Rechner (Orientierung):</p>
-        <input id="currentPremium" type="number" min="0" placeholder="z. B. 800"/>
-        <div class="small" style="margin-top:8px" id="savingOutput"></div>
-        <div class="note" style="margin-top:10px">Kein Versprechen: tatsächliche Ersparnis hängt von individuellen Faktoren ab.</div>
-      </div>
-      <div class="card">
-        <h2>So senkst du Kosten</h2>
-        <ul class="ul">
-          <li>Leistungsumfang passend wählen (nicht „über-“, aber auch nicht „unterversichern“)</li>
-          <li>Unterversicherung vermeiden (saubere Wertermittlung)</li>
-          <li>Selbstbeteiligung bewusst einsetzen</li>
-          <li>Elementar nach Risiko entscheiden</li>
-          <li>Bei Beitragserhöhung Wechseloption prüfen</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h2>CTA</h2>
-        <p>Hol dir die Auswertung per E-Mail.</p>
-        <a class="btn btn-primary js-open-funnel" href="index.html#sparcheck">Spar-Check starten</a>
+      <div class="ctaRow" style="margin-top:14px;">
+        <a class="btn btn--primary" href="index.html">Zum Spar-Check</a>
+        <a class="btn btn--ghost" href="beitragserhoehung.html">Beitragserhöhung?</a>
       </div>
     </div>
-  </section>
+  </main>
 
-  <footer class="footer">© <span id="y"></span> Wohngebäude-SparCheck</footer>
-  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
-</main>
-
-<!-- reuse modal from index? On static pages easiest: link to index funnel -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© 2026 Wohngebäude-SparCheck</div>
+      <div class="footer__links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+      <div class="muted">Vorschau-Modus (noindex)</div>
+    </div>
+  </footer>
 </body>
 </html>
