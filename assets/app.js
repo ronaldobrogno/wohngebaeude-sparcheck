@@ -1,175 +1,385 @@
-:root{
-  --bg:#0b1220;
-  --card:#0f1b33;
-  --muted:#9fb0d0;
-  --text:#eaf0ff;
-  --accent:#3ddc97;
-  --accent2:#4f8cff;
-  --danger:#ff5c7a;
-  --border:rgba(255,255,255,.10);
-  --shadow:0 12px 30px rgba(0,0,0,.35);
-  --radius:16px;
-  --max:1100px;
-  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-}
+/* =========================================
+   Wohngebäude-SparCheck - Funnel Script
+   - reliable open/close modal
+   - steps + validation
+   - mobile nav + dropdown
+   ========================================= */
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:var(--font);background:radial-gradient(1200px 700px at 20% 10%, rgba(79,140,255,.20), transparent 55%),
-radial-gradient(1000px 600px at 80% 0%, rgba(61,220,151,.16), transparent 50%),
-var(--bg); color:var(--text);}
-a{color:inherit}
-.container{max-width:var(--max); margin:0 auto; padding:22px;}
-.nav{
-  position:sticky; top:0; z-index:20;
-  backdrop-filter: blur(10px);
-  background: rgba(11,18,32,.72);
-  border-bottom:1px solid var(--border);
-}
-.nav-inner{display:flex; align-items:center; justify-content:space-between; gap:16px;}
-.brand{display:flex; align-items:center; gap:10px; text-decoration:none;}
-.logo{
-  width:36px;height:36px;border-radius:12px;
-  background: linear-gradient(135deg, var(--accent2), var(--accent));
-  box-shadow: var(--shadow);
-}
-.brand strong{letter-spacing:.2px}
-.navlinks{display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end}
-.navlinks a{
-  text-decoration:none;
-  padding:9px 12px;
-  border:1px solid var(--border);
-  border-radius:12px;
-  color:var(--muted);
-}
-.navlinks a:hover{color:var(--text); border-color:rgba(255,255,255,.18)}
-.hero{
-  padding:34px 0 10px;
-}
-.grid-hero{
-  display:grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap:18px;
-  align-items:stretch;
-}
-@media (max-width: 900px){
-  .grid-hero{grid-template-columns:1fr}
-}
-.card{
-  background:rgba(15,27,51,.82);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  padding:18px;
-}
-.badge{
-  display:inline-flex; align-items:center; gap:8px;
-  background: rgba(61,220,151,.12);
-  border:1px solid rgba(61,220,151,.28);
-  color: #baf7df;
-  padding:6px 10px;
-  border-radius:999px;
-  font-size:13px;
-}
-h1{margin:12px 0 10px; font-size:40px; line-height:1.05}
-@media(max-width:520px){h1{font-size:34px}}
-p{color:var(--muted); line-height:1.6}
-.kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:16px}
-@media (max-width: 700px){.kpis{grid-template-columns:1fr}}
-.kpi{padding:12px; border:1px solid var(--border); border-radius:14px; background:rgba(255,255,255,.03)}
-.kpi b{display:block; font-size:18px; color:var(--text)}
-.kpi span{font-size:13px; color:var(--muted)}
-.btnrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
-.btn{
-  cursor:pointer;
-  border:0;
-  border-radius:14px;
-  padding:12px 14px;
-  font-weight:650;
-  text-decoration:none;
-  display:inline-flex; align-items:center; justify-content:center; gap:8px;
-}
-.btn-primary{background:linear-gradient(135deg, var(--accent2), var(--accent)); color:#071022}
-.btn-ghost{background:transparent; border:1px solid var(--border); color:var(--text)}
-.btn-ghost:hover{border-color:rgba(255,255,255,.18)}
-.small{font-size:13px;color:var(--muted)}
-.hr{height:1px; background:var(--border); margin:16px 0}
-.section{padding:18px 0}
-.section h2{margin:0 0 8px; font-size:26px}
-.cols{
-  display:grid; grid-template-columns:repeat(3,1fr);
-  gap:12px;
-}
-@media(max-width:900px){.cols{grid-template-columns:1fr}}
-.ul{margin:0; padding-left:18px; color:var(--muted); line-height:1.7}
-.note{
-  padding:12px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,.12);
-  background:rgba(255,255,255,.03);
-  color:var(--muted);
-  font-size:13px;
-}
-.footer{
-  margin-top:24px; padding:22px 0;
-  border-top:1px solid var(--border);
-  color:var(--muted);
-  font-size:13px;
-}
-.faq details{
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:12px;
-  background:rgba(255,255,255,.03);
-  margin-bottom:10px;
-}
-.faq summary{cursor:pointer; color:var(--text); font-weight:650}
-.faq p{margin:10px 0 0}
+(function () {
+  "use strict";
 
-.modal{
-  position:fixed; inset:0; display:none; z-index:50;
-  background:rgba(0,0,0,.55);
-  padding:18px;
-}
-.modal.open{display:flex; align-items:center; justify-content:center}
-.modal-inner{max-width:760px; width:100%}
-.stepper{display:flex; gap:8px; flex-wrap:wrap; margin:10px 0 14px}
-.stepdot{width:10px;height:10px;border-radius:999px;background:rgba(255,255,255,.18)}
-.stepdot.active{background:linear-gradient(135deg, var(--accent2), var(--accent))}
-.formgrid{display:grid; grid-template-columns:1fr 1fr; gap:10px}
-@media(max-width:700px){.formgrid{grid-template-columns:1fr}}
-.field label{display:block; font-size:13px; color:var(--muted); margin:0 0 6px}
-.field input, .field select, .field textarea{
-  width:100%;
-  padding:12px 12px;
-  border-radius:12px;
-  border:1px solid var(--border);
-  background:rgba(0,0,0,.18);
-  color:var(--text);
-  outline:none;
-}
-.field input:focus, .field select:focus, .field textarea:focus{
-  border-color: rgba(79,140,255,.55);
-  box-shadow:0 0 0 4px rgba(79,140,255,.10);
-}
-.error{color:var(--danger); font-size:13px; margin-top:6px; display:none}
-.error.show{display:block}
-.inline{
-  display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between;
-}
-.close{
-  background:transparent; border:1px solid var(--border); color:var(--text);
-  border-radius:12px; padding:10px 12px; cursor:pointer;
-}
-.pill{
-  display:inline-flex; gap:8px; align-items:center;
-  padding:8px 10px; border-radius:999px;
-  border:1px solid var(--border);
-  background:rgba(255,255,255,.03);
-  color:var(--muted);
-  font-size:13px;
-}
-.highlight{
-  border:1px solid rgba(61,220,151,.28);
-  background: rgba(61,220,151,.10);
-  color:#c8ffe8;
-}
+  // ---------- helpers ----------
+  const $ = (sel, root = document) => root.querySelector(sel);
+  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+  function show(el) {
+    if (!el) return;
+    el.hidden = false;
+  }
+  function hide(el) {
+    if (!el) return;
+    el.hidden = true;
+  }
+  function setText(el, txt) {
+    if (!el) return;
+    el.textContent = txt;
+  }
+
+  function isEmail(v) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(v || "").trim());
+  }
+  function isPhone(v) {
+    // simple German-ish check
+    const s = String(v || "").replace(/\s+/g, "");
+    return /^(\+?\d{6,15})$/.test(s);
+  }
+  function isPLZ(v) {
+    return /^\d{5}$/.test(String(v || "").trim());
+  }
+
+  function lockScroll(lock) {
+    document.body.style.overflow = lock ? "hidden" : "";
+  }
+
+  // ---------- header dropdown ----------
+  function initDropdown() {
+    const btn = $("#navDropBtn");
+    const menu = $("#navDrop");
+    if (!btn || !menu) return;
+
+    function close() { menu.style.display = "none"; btn.setAttribute("aria-expanded", "false"); }
+    function open() { menu.style.display = "block"; btn.setAttribute("aria-expanded", "true"); }
+
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const openNow = btn.getAttribute("aria-expanded") === "true";
+      openNow ? close() : open();
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && e.target !== btn) close();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") close();
+    });
+  }
+
+  // ---------- mobile menu ----------
+  function initMobileMenu() {
+    const burger = $("#burger");
+    const mobile = $("#mobileNav");
+    if (!burger || !mobile) return;
+
+    burger.addEventListener("click", () => {
+      const expanded = burger.getAttribute("aria-expanded") === "true";
+      burger.setAttribute("aria-expanded", String(!expanded));
+      mobile.hidden = expanded;
+    });
+
+    // close mobile menu when clicking a link
+    $$(".mobile__link", mobile).forEach((a) => {
+      a.addEventListener("click", () => {
+        burger.setAttribute("aria-expanded", "false");
+        mobile.hidden = true;
+      });
+    });
+  }
+
+  // ---------- modal / funnel ----------
+  function initFunnel() {
+    const modal = $("#sparcheckModal");
+    if (!modal) return;
+
+    const backdrop = $("#modalBackdrop");
+    const closeBtn = $("#modalClose");
+
+    const openTop = $("#openSparCheckTop");
+    const openHeroNew = $("#openSparCheckNew");
+    const openHeroCheck = $("#openSparCheckCheck");
+    const openBottom = $("#openSparCheckBottom");
+
+    const progressBar = $("#progressBar");
+
+    const steps = $$(".step", modal);
+    let stepIndex = 0;
+
+    // form + fields
+    const form = $("#sparcheckForm");
+
+    const modeRadios = $$('input[name="mode"]', modal);
+
+    const buildingType = $("#buildingType");
+    const plz = $("#plz");
+    const yearBuilt = $("#yearBuilt");
+    const area = $("#area");
+
+    const currentInsurer = $("#currentInsurer");
+    const currentAnnual = $("#currentAnnual");
+    const increase = $("#increase");
+
+    const firstName = $("#firstName");
+    const lastName = $("#lastName");
+    const email = $("#email");
+    const phone = $("#phone");
+    const gdpr = $("#gdpr");
+
+    const errBuildingType = $("#errBuildingType");
+    const errPLZ = $("#errPLZ");
+    const errYearBuilt = $("#errYearBuilt");
+    const errArea = $("#errArea");
+    const errAnnual = $("#errAnnual");
+
+    const errName = $("#errName");
+    const errEmail = $("#errEmail");
+    const errPhone = $("#errPhone");
+    const errGDPR = $("#errGDPR");
+
+    // summary elements
+    const summaryMode = $("#summaryMode");
+    const summaryType = $("#summaryType");
+    const summaryPLZ = $("#summaryPLZ");
+    const summaryYear = $("#summaryYear");
+    const summaryArea = $("#summaryArea");
+    const summaryAnnual = $("#summaryAnnual");
+
+    // Buttons step nav
+    const next1 = $("#next1");
+    const next2 = $("#next2");
+    const next3 = $("#next3");
+    const next4 = $("#next4");
+    const back2 = $("#back2");
+    const back3 = $("#back3");
+    const back4 = $("#back4");
+    const back5 = $("#back5");
+
+    const doneClose = $("#doneClose");
+
+    // mode handling: "new" vs "check"
+    function getMode() {
+      const checked = modeRadios.find(r => r.checked);
+      return checked ? checked.value : "check";
+    }
+
+    function updateProgress() {
+      const pct = Math.round(((stepIndex + 1) / steps.length) * 100);
+      if (progressBar) progressBar.style.width = `${pct}%`;
+    }
+
+    function showStep(i) {
+      stepIndex = Math.max(0, Math.min(i, steps.length - 1));
+      steps.forEach((s, idx) => {
+        s.hidden = idx !== stepIndex;
+      });
+      updateProgress();
+
+      // For step 3 (current policy) we hide if mode=new
+      if (stepIndex === 2) {
+        const mode = getMode();
+        if (mode === "new") {
+          // skip current policy step
+          showStep(3);
+          return;
+        }
+      }
+
+      // populate summary on step 5
+      if (stepIndex === 4) fillSummary();
+    }
+
+    function openModal(prefMode) {
+      if (prefMode) {
+        modeRadios.forEach(r => (r.checked = (r.value === prefMode)));
+      }
+      show(modal);
+      lockScroll(true);
+      showStep(0);
+      clearErrors();
+      // focus first actionable input
+      setTimeout(() => {
+        const first = $('input[name="mode"]:checked', modal);
+        if (first) first.focus();
+      }, 50);
+    }
+
+    function closeModal() {
+      hide(modal);
+      lockScroll(false);
+    }
+
+    // close events
+    if (closeBtn) closeBtn.addEventListener("click", closeModal);
+    if (backdrop) backdrop.addEventListener("click", closeModal);
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !modal.hidden) closeModal();
+    });
+
+    // open events (all are buttons type=button, so no scroll-to-top)
+    if (openTop) openTop.addEventListener("click", () => openModal("check"));
+    if (openBottom) openBottom.addEventListener("click", () => openModal("check"));
+    if (openHeroNew) openHeroNew.addEventListener("click", () => openModal("new"));
+    if (openHeroCheck) openHeroCheck.addEventListener("click", () => openModal("check"));
+
+    // also allow open via any [data-open-sparcheck]
+    $$("[data-open-sparcheck]").forEach(el => {
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+        const m = el.getAttribute("data-open-sparcheck");
+        openModal(m || "check");
+      });
+    });
+
+    // navigation buttons
+    function clearErrors() {
+      [errBuildingType, errPLZ, errYearBuilt, errArea, errAnnual, errName, errEmail, errPhone, errGDPR].forEach(el => setText(el, ""));
+    }
+
+    function vStep2() {
+      let ok = true;
+      setText(errBuildingType, "");
+      setText(errPLZ, "");
+      setText(errYearBuilt, "");
+      setText(errArea, "");
+
+      if (!buildingType || !buildingType.value) {
+        setText(errBuildingType, "Bitte Gebäudetyp auswählen.");
+        ok = false;
+      }
+      if (!isPLZ(plz?.value)) {
+        setText(errPLZ, "Bitte gültige PLZ (5-stellig) eingeben.");
+        ok = false;
+      }
+      const y = parseInt(yearBuilt?.value, 10);
+      if (!y || y < 1800 || y > new Date().getFullYear()) {
+        setText(errYearBuilt, "Bitte Baujahr (z. B. 1998) eingeben.");
+        ok = false;
+      }
+      const a = parseFloat(String(area?.value || "").replace(",", "."));
+      if (!a || a < 10 || a > 2000) {
+        setText(errArea, "Bitte Wohnfläche in m² (z. B. 120) eingeben.");
+        ok = false;
+      }
+      return ok;
+    }
+
+    function vStep3() {
+      // Only if mode=check; otherwise skipped
+      const mode = getMode();
+      if (mode === "new") return true;
+
+      setText(errAnnual, "");
+      const v = parseFloat(String(currentAnnual?.value || "").replace(",", "."));
+      if (!v || v < 50 || v > 20000) {
+        setText(errAnnual, "Bitte aktuellen Jahresbeitrag in € angeben (z. B. 800).");
+        return false;
+      }
+      return true;
+    }
+
+    function vStep4() {
+      let ok = true;
+      setText(errName, "");
+      setText(errEmail, "");
+      setText(errPhone, "");
+
+      if (!String(firstName?.value || "").trim() || !String(lastName?.value || "").trim()) {
+        setText(errName, "Bitte Vor- und Nachname eingeben.");
+        ok = false;
+      }
+      if (!isEmail(email?.value)) {
+        setText(errEmail, "Bitte gültige E-Mail eingeben.");
+        ok = false;
+      }
+      if (!isPhone(phone?.value)) {
+        setText(errPhone, "Bitte gültige Telefonnummer eingeben.");
+        ok = false;
+      }
+      return ok;
+    }
+
+    function vStep5() {
+      setText(errGDPR, "");
+      if (!gdpr?.checked) {
+        setText(errGDPR, "Bitte Datenschutz bestätigen.");
+        return false;
+      }
+      return true;
+    }
+
+    function fillSummary() {
+      const mode = getMode();
+      setText(summaryMode, mode === "new" ? "Neu abschließen" : "Beitrag prüfen");
+      setText(summaryType, buildingType?.value || "—");
+      setText(summaryPLZ, plz?.value || "—");
+      setText(summaryYear, yearBuilt?.value || "—");
+      setText(summaryArea, (area?.value || "—") + " m²");
+
+      if (mode === "new") {
+        setText(summaryAnnual, "— (Neuabschluss)");
+      } else {
+        setText(summaryAnnual, (currentAnnual?.value || "—") + " € / Jahr");
+      }
+    }
+
+    // Step buttons
+    if (next1) next1.addEventListener("click", () => showStep(1));
+
+    if (back2) back2.addEventListener("click", () => showStep(0));
+    if (next2) next2.addEventListener("click", () => {
+      clearErrors();
+      if (!vStep2()) return;
+      showStep(2);
+    });
+
+    if (back3) back3.addEventListener("click", () => showStep(1));
+    if (next3) next3.addEventListener("click", () => {
+      clearErrors();
+      if (!vStep3()) return;
+      showStep(3);
+    });
+
+    if (back4) back4.addEventListener("click", () => {
+      // if mode=new, step 3 is skipped, so go back to step 2
+      const mode = getMode();
+      showStep(mode === "new" ? 1 : 2);
+    });
+    if (next4) next4.addEventListener("click", () => {
+      clearErrors();
+      if (!vStep4()) return;
+      showStep(4);
+    });
+
+    if (back5) back5.addEventListener("click", () => showStep(3));
+
+    // Submit: Preview mode -> show thanks (no request)
+    if (form) {
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        clearErrors();
+        if (!vStep5()) return;
+
+        // Here you can later switch to "real send" (Formspree)
+        // For now: Preview-only thanks screen
+        showStep(5);
+      });
+    }
+
+    if (doneClose) doneClose.addEventListener("click", closeModal);
+
+    // If user changes mode on step 1, keep flow consistent
+    modeRadios.forEach(r => {
+      r.addEventListener("change", () => {
+        // if user is in current policy step and chooses "new", we auto-skip
+        if (stepIndex === 2 && getMode() === "new") showStep(3);
+      });
+    });
+  }
+
+  // ---------- boot ----------
+  document.addEventListener("DOMContentLoaded", () => {
+    initDropdown();
+    initMobileMenu();
+    initFunnel();
+  });
+
+})();
