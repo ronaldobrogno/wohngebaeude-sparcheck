@@ -3,27 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Wohngebäudeversicherung Vergleich 2026 – Sparpotenzial prüfen (bis zu 40%)</title>
-  <meta name="description" content="Wohngebäudeversicherung vergleichen & Sparpotenzial prüfen: typischerweise 10–30%, in Einzelfällen bis zu 40%. Kostenloser Spar-Check in 2 Minuten." />
+  <title>Wohngebäudeversicherung 2026 – Haus absichern & Sparpotenzial prüfen</title>
+  <meta name="description" content="Wohngebäudeversicherung für Ihr Haus: Feuer, Leitungswasser, Sturm/Hagel – Elementar optional. Spar-Check in 2 Minuten (typisch 10–30%, teils bis 40%)." />
   <meta name="robots" content="noindex,nofollow" />
 
   <style>
     :root{
-      --bg1:#050814;
-      --bg2:#071a2d;
-      --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.08);
-      --border: rgba(255,255,255,.12);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.65);
-      --accent1:#21d4fd;
-      --accent2:#b721ff;
-      --accent3:#18f0a5;
-      --shadow: 0 18px 70px rgba(0,0,0,.55);
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --border:#e6ebf2;
+      --text:#0b1220;
+      --muted:#566277;
+      --primary:#1b76ff;
+      --primary2:#0ea5e9;
+      --green:#16a34a;
+      --greenSoft:#eaf8ef;
+      --blueSoft:#e9f3ff;
+      --shadow: 0 10px 30px rgba(16,24,40,.08);
       --radius: 18px;
       --radius2: 14px;
       --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -31,20 +32,20 @@
       font-family:var(--font);
       color:var(--text);
       background:
-        radial-gradient(900px 420px at 25% 15%, rgba(33,212,253,.20), transparent 60%),
-        radial-gradient(900px 420px at 70% 20%, rgba(183,33,255,.18), transparent 60%),
-        radial-gradient(900px 420px at 50% 90%, rgba(24,240,165,.10), transparent 60%),
-        linear-gradient(180deg, var(--bg1), var(--bg2));
+        radial-gradient(900px 420px at 15% 10%, #e9f3ff 0%, transparent 55%),
+        radial-gradient(900px 420px at 85% 10%, #eaf8ef 0%, transparent 55%),
+        linear-gradient(180deg, #ffffff, var(--bg));
     }
-    a{color:rgba(140,220,255,.95); text-decoration:none}
+    a{color:var(--primary); text-decoration:none}
     a:hover{text-decoration:underline}
     .container{max-width:1120px; margin:0 auto; padding:0 18px}
 
+    /* Topbar */
     .topbar{
       position:sticky; top:0; z-index:50;
+      background: rgba(255,255,255,.85);
       backdrop-filter: blur(10px);
-      background: rgba(0,0,0,.20);
-      border-bottom:1px solid rgba(255,255,255,.08);
+      border-bottom:1px solid var(--border);
     }
     .topbar__inner{
       display:flex; align-items:center; justify-content:space-between;
@@ -53,54 +54,49 @@
     }
     .brand{display:flex; align-items:center; gap:10px}
     .brand__logo{
-      width:34px; height:34px; border-radius:11px;
-      background: linear-gradient(135deg, var(--accent1), var(--accent2));
-      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+      width:36px; height:36px; border-radius:12px;
+      background: linear-gradient(135deg, var(--primary), var(--primary2));
+      box-shadow: 0 10px 22px rgba(27,118,255,.22);
+      display:inline-flex; align-items:center; justify-content:center;
+      color:white; font-weight:900;
     }
-    .brand__name{font-weight:700; letter-spacing:.2px}
+    .brand__name{font-weight:800; letter-spacing:.2px}
+    .brand__sub{display:block; font-size:12px; color:var(--muted); margin-top:2px}
 
     .nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end}
     .nav__link{
       padding:10px 12px;
-      border:1px solid rgba(255,255,255,.12);
+      border:1px solid var(--border);
       border-radius:999px;
-      background: rgba(255,255,255,.03);
+      background: #fff;
       color:var(--text);
       font-size:14px;
     }
-    .nav__link:hover{background: rgba(255,255,255,.06); text-decoration:none}
+    .nav__link:hover{background: #f3f6fb; text-decoration:none}
     .nav__cta{
-      border:1px solid rgba(255,255,255,.14);
+      border:1px solid rgba(27,118,255,.25);
       border-radius:999px;
       padding:10px 14px;
-      background: linear-gradient(135deg, rgba(33,212,253,.25), rgba(183,33,255,.18));
+      background: linear-gradient(135deg, rgba(27,118,255,.12), rgba(14,165,233,.10));
       color:var(--text);
-      font-weight:700;
+      font-weight:800;
       cursor:pointer;
     }
-    .nav__cta:hover{filter:brightness(1.05)}
+    .nav__cta:hover{filter:brightness(1.02)}
 
+    /* Cards */
     .card{
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.05);
+      border:1px solid var(--border);
+      background: var(--card);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
     .card--soft{
       border-radius: var(--radius2);
-      background: rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.10);
+      background: #fbfcff;
+      border:1px solid var(--border);
       padding:14px;
     }
-
-    .hero{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:18px;
-      padding:18px 0 10px;
-    }
-    .hero__left{padding:22px}
-    .hero__right{padding:22px}
 
     .pill{
       display:inline-flex;
@@ -108,24 +104,48 @@
       gap:8px;
       padding:8px 12px;
       border-radius:999px;
-      border:1px solid rgba(24,240,165,.25);
-      background: rgba(24,240,165,.08);
-      color:rgba(220,255,245,.92);
+      border:1px solid #cfe2ff;
+      background: var(--blueSoft);
+      color:#1b4fd6;
       font-size:13px;
+      font-weight:700;
       margin-bottom:12px;
     }
 
-    h1{margin:8px 0 10px; font-size:42px; line-height:1.08}
-    .lead{margin:0 0 16px; color:var(--muted); font-size:16px; line-height:1.55}
-
-    .grid3{
+    /* Hero */
+    .hero{
       display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:12px;
-      margin:14px 0 14px;
+      grid-template-columns: 1.1fr .9fr;
+      gap:18px;
+      padding:18px 0 10px;
+      align-items:stretch;
     }
-    .mini__title{font-weight:800; font-size:16px}
-    .mini__text{color:var(--muted); margin-top:4px; font-size:13px}
+    .hero__left{padding:24px}
+    .hero__right{padding:24px}
+
+    h1{margin:8px 0 10px; font-size:40px; line-height:1.08}
+    .lead{margin:0 0 14px; color:var(--muted); font-size:16px; line-height:1.55}
+
+    .highlightRow{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin:12px 0 14px;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px;
+      border-radius: 12px;
+      border:1px solid var(--border);
+      background:#fff;
+      color:var(--text);
+      font-size:13px;
+      font-weight:700;
+    }
+    .badge i{
+      width:22px; height:22px; border-radius:8px;
+      display:inline-flex; align-items:center; justify-content:center;
+      background: #f3f6fb;
+      font-style:normal;
+    }
 
     .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 10px}
     .btn{
@@ -135,57 +155,87 @@
       gap:8px;
       padding:12px 14px;
       border-radius: 12px;
-      border:1px solid rgba(255,255,255,.14);
+      border:1px solid var(--border);
       cursor:pointer;
-      font-weight:700;
+      font-weight:800;
       color:var(--text);
-      background: rgba(255,255,255,.04);
+      background: #fff;
     }
-    .btn:hover{filter:brightness(1.05); text-decoration:none}
+    .btn:hover{background:#f3f6fb; text-decoration:none}
     .btn--primary{
       border:none;
-      background: linear-gradient(135deg, rgba(33,212,253,.90), rgba(24,240,165,.70));
-      color: rgba(4,10,18,.95);
+      background: linear-gradient(135deg, var(--primary), var(--primary2));
+      color: white;
+      box-shadow: 0 10px 22px rgba(27,118,255,.18);
     }
-    .btn--ghost{background: rgba(255,255,255,.03)}
+    .btn--ghost{background:#fff}
 
     .note{
       margin-top:12px;
-      color: rgba(255,255,255,.60);
+      color: var(--muted);
       font-size:13px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.18);
+      border:1px solid var(--border);
+      background: #fbfcff;
       border-radius: 12px;
       padding:12px;
     }
 
-    .label{display:block; margin:10px 0 6px; color:rgba(255,255,255,.75); font-size:13px}
+    .label{display:block; margin:10px 0 6px; color:var(--muted); font-size:13px; font-weight:700}
     .input{
       width:100%;
       padding:12px 12px;
       border-radius:12px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.22);
+      border:1px solid var(--border);
+      background: #fff;
       color: var(--text);
       outline:none;
     }
-    .input:focus{border-color: rgba(33,212,253,.55); box-shadow: 0 0 0 3px rgba(33,212,253,.15)}
+    .input:focus{border-color: rgba(27,118,255,.45); box-shadow: 0 0 0 3px rgba(27,118,255,.12)}
 
-    .tagRow{display:flex; gap:8px; flex-wrap:wrap; margin:12px 0 0}
-    .tag{
+    .hr{height:1px; background: var(--border); margin:16px 0}
+    .h2{font-size:18px; margin:0 0 8px}
+    .list{margin:0; padding-left:18px; color: var(--muted); line-height:1.7}
+
+    /* Right visual */
+    .heroVisual{
+      display:flex; gap:14px; align-items:flex-start;
+      padding:14px;
+      border-radius: 16px;
+      border:1px solid var(--border);
+      background: linear-gradient(180deg, #ffffff, #f7fbff);
+    }
+    .houseSvg{
+      width:86px; height:86px;
+      flex:0 0 auto;
+      border-radius: 18px;
+      border:1px solid var(--border);
+      background: #fff;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow: 0 8px 20px rgba(16,24,40,.06);
+    }
+    .heroVisual h3{margin:0 0 6px; font-size:16px}
+    .heroVisual p{margin:0; color:var(--muted); line-height:1.5; font-size:13px}
+
+    .trustBox{
+      margin-top:14px;
+      border:1px solid #cfead6;
+      background: var(--greenSoft);
+      border-radius: 14px;
+      padding:12px;
+    }
+    .trustBox b{color:#0f6a2c}
+    .trustRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .chip{
       padding:8px 10px;
       border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
+      border:1px solid #cfead6;
+      background:#fff;
       font-size:13px;
-      color: rgba(255,255,255,.85);
+      font-weight:700;
+      color:#0f6a2c;
     }
-    .tag--muted{opacity:.75}
 
-    .hr{height:1px; background: rgba(255,255,255,.10); margin:16px 0}
-    .h2{font-size:18px; margin:0 0 8px}
-    .list{margin:0; padding-left:18px; color: rgba(255,255,255,.75); line-height:1.6}
-
+    /* Link cards */
     .cards{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
@@ -196,73 +246,76 @@
     .linkCard h3{margin:0 0 8px}
     .linkCard p{margin:0 0 12px; color: var(--muted); line-height:1.5}
 
+    /* FAQ */
     .faq{padding:12px 0 28px}
     .faq h2{margin:0 0 12px}
     .faqItem{
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
+      border:1px solid var(--border);
+      background: #fff;
       border-radius: 14px;
       padding:12px 14px;
       margin-bottom:10px;
     }
-    .faqItem summary{cursor:pointer; font-weight:800}
+    .faqItem summary{cursor:pointer; font-weight:900}
     .faqItem p{color: var(--muted); line-height:1.6}
 
+    /* Footer */
     .footer{
-      border-top:1px solid rgba(255,255,255,.08);
-      background: rgba(0,0,0,.18);
+      border-top:1px solid var(--border);
+      background: #fff;
     }
     .footer__inner{
       display:flex; align-items:center; justify-content:space-between;
       padding:14px 0; gap:10px; flex-wrap:wrap;
     }
     .footer__links{display:flex; gap:12px}
-    .muted{color:rgba(255,255,255,.60); font-size:13px}
+    .muted{color:var(--muted); font-size:13px}
 
     /* MODAL */
     .modal{position:fixed; inset:0; display:none; z-index:100}
     .modal.is-open{display:block}
     .modal__overlay{
       position:absolute; inset:0;
-      background: rgba(0,0,0,.62);
-      backdrop-filter: blur(6px);
+      background: rgba(11,18,32,.45);
+      backdrop-filter: blur(4px);
     }
     .modal__panel{
       position:relative;
       width:min(820px, calc(100% - 24px));
       margin: 70px auto 24px;
       border-radius: 18px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(10,14,28,.92);
-      box-shadow: 0 26px 120px rgba(0,0,0,.65);
+      border:1px solid var(--border);
+      background: #fff;
+      box-shadow: 0 26px 120px rgba(11,18,32,.22);
       padding: 18px;
       max-height: calc(100vh - 94px);
       overflow:auto;
     }
     .modal__head{
       display:flex; justify-content:space-between; gap:12px; align-items:flex-start;
-      border-bottom:1px solid rgba(255,255,255,.10);
+      border-bottom:1px solid var(--border);
       padding-bottom:12px;
     }
-    .modal__kicker{color:rgba(24,240,165,.90); font-weight:800; font-size:13px}
+    .modal__kicker{color:#0f6a2c; font-weight:900; font-size:13px}
     .modal__title{margin:6px 0 0; font-size:18px}
     .iconBtn{
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.05);
+      border:1px solid var(--border);
+      background: #fff;
       color:var(--text);
       border-radius: 12px;
       padding:10px 12px;
       cursor:pointer;
+      font-weight:900;
     }
-    .iconBtn:hover{filter:brightness(1.05)}
+    .iconBtn:hover{background:#f3f6fb}
 
     .stepBar{display:flex; gap:8px; padding:14px 0}
     .stepDot{
       height:8px; flex:1;
       border-radius:999px;
-      background: rgba(255,255,255,.10);
+      background: #eef2f8;
     }
-    .stepDot.is-active{background: linear-gradient(135deg, rgba(33,212,253,.95), rgba(24,240,165,.70))}
+    .stepDot.is-active{background: linear-gradient(135deg, var(--primary), var(--primary2))}
 
     .form{margin-top:6px}
     .step{display:none}
@@ -271,30 +324,30 @@
     .stepNav{
       display:flex; justify-content:space-between; gap:10px; margin-top:14px;
     }
-    .err{color: rgba(255,140,140,.95); font-size:13px; margin-top:6px; min-height:18px}
+    .err{color: #c02626; font-size:13px; margin-top:6px; min-height:18px}
+
     .resultBox{
-      border:1px solid rgba(24,240,165,.18);
-      background: rgba(24,240,165,.08);
+      border:1px solid #cfe2ff;
+      background: var(--blueSoft);
       border-radius: 14px;
       padding:12px;
       margin-bottom:12px;
     }
-    .resultBox__title{font-weight:900}
-    .resultBox__text{color: rgba(220,255,245,.85); margin-top:4px; line-height:1.45}
+    .resultBox__title{font-weight:900; color:#1b4fd6}
+    .resultBox__text{color: #334155; margin-top:4px; line-height:1.45}
     .check{
       display:flex; gap:10px; align-items:flex-start;
       padding:12px;
       border-radius:14px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
+      border:1px solid var(--border);
+      background: #fbfcff;
     }
     .check input{margin-top:3px}
 
     @media (max-width: 980px){
       .hero{grid-template-columns:1fr}
-      h1{font-size:36px}
+      h1{font-size:34px}
       .cards{grid-template-columns:1fr}
-      .grid3{grid-template-columns:1fr}
       .nav{justify-content:flex-start}
       .modal__panel{margin-top:54px}
     }
@@ -304,10 +357,13 @@
 <body>
   <header class="topbar">
     <div class="container topbar__inner">
-      <a class="brand" href="index.html" aria-label="Startseite">
-        <span class="brand__logo" aria-hidden="true"></span>
-        <span class="brand__name">Wohngebäude-SparCheck</span>
-      </a>
+      <div class="brand" aria-label="Startseite">
+        <span class="brand__logo" aria-hidden="true">🏠</span>
+        <div>
+          <span class="brand__name">Wohngebäude-SparCheck</span>
+          <span class="brand__sub">Absicherung fürs Haus + Beitrag prüfen</span>
+        </div>
+      </div>
 
       <nav class="nav">
         <a class="nav__link" href="kosten.html">Kosten</a>
@@ -322,79 +378,90 @@
   <main class="container">
     <section class="hero">
       <div class="hero__left card">
-        <div class="pill">🏠 Vergleich & Spar-Check 2026</div>
-        <h1>Wohngebäudeversicherung vergleichen – Sparpotenzial prüfen</h1>
+        <div class="pill">✅ Wohngebäudeversicherung 2026</div>
+        <h1>Schützen Sie Ihr Haus – und prüfen Sie, ob Sie zu viel zahlen</h1>
         <p class="lead">
-          Viele Eigentümer zahlen mehr als nötig. Auf Basis Ihrer Angaben (PLZ, Gebäudetyp, Baujahr, Wohnfläche)
-          prüfen wir ein mögliches Sparpotenzial. <strong>Typisch 10–30%</strong>, in Einzelfällen <strong>bis zu 40%</strong> möglich.
+          Eine Wohngebäudeversicherung sichert Ihr Eigentum gegen zentrale Risiken ab.
+          Wir prüfen anhand weniger Angaben (PLZ, Gebäudetyp, Baujahr, Wohnfläche), ob ein günstigerer Tarif möglich ist.
+          <b>Typisch 10–30%</b>, in Einzelfällen <b>bis zu 40%</b>.
         </p>
 
-        <div class="grid3">
-          <div class="mini card--soft">
-            <div class="mini__title">2 Minuten</div>
-            <div class="mini__text">Kurzer Spar-Check</div>
-          </div>
-          <div class="mini card--soft">
-            <div class="mini__title">Kostenlos</div>
-            <div class="mini__text">Unverbindliche Auswertung</div>
-          </div>
-          <div class="mini card--soft">
-            <div class="mini__title">Ohne Schutzlücke</div>
-            <div class="mini__text">Kernschutz im Blick</div>
-          </div>
+        <div class="highlightRow">
+          <span class="badge"><i>🔥</i> Feuer</span>
+          <span class="badge"><i>💧</i> Leitungswasser</span>
+          <span class="badge"><i>🌬️</i> Sturm & Hagel</span>
+          <span class="badge"><i>🌧️</i> Elementar optional</span>
         </div>
 
         <div class="ctaRow">
           <button type="button" class="btn btn--primary" id="openSparCheck">Spar-Check starten</button>
-          <a class="btn btn--ghost" href="beitragserhoehung.html">Beitragserhöhung? →</a>
+          <a class="btn btn--ghost" href="beitragserhoehung.html">Ich hatte eine Beitragserhöhung →</a>
         </div>
 
         <div class="note">
-          Hinweis: Das Sparpotenzial hängt u. a. von PLZ, Baujahr, Wohnfläche, Vorschäden, Deckung (inkl./exkl. Elementar)
-          und Selbstbeteiligung ab.
+          <b>Wichtig:</b> Wir achten auf passenden Versicherungswert (z. B. Wert 1914/gleitender Neuwert),
+          damit keine Unterversicherung entsteht und Ihr Haus sauber abgesichert bleibt.
         </div>
       </div>
 
       <aside class="hero__right card">
-        <div class="pill">🧮 Schnell-Rechner (Orientierung)</div>
-        <label class="label" for="annual">Aktueller Jahresbeitrag (z. B. 800):</label>
-        <input class="input" id="annual" type="number" inputmode="numeric" min="0" placeholder="800" value="800" />
-        <div class="tagRow">
-          <span class="tag">🔥 Feuer</span>
-          <span class="tag">💧 Leitungswasser</span>
-          <span class="tag">🌪️ Sturm & Hagel</span>
-          <span class="tag tag--muted">🌧️ Elementar (optional)</span>
+        <div class="heroVisual">
+          <div class="houseSvg" aria-hidden="true">
+            <!-- simple house shield icon -->
+            <svg width="52" height="52" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 30L32 12L54 30V54H38V40H26V54H10V30Z" fill="#E9F3FF" stroke="#1B76FF" stroke-width="2"/>
+              <path d="M32 26C24 26 18 30 18 30V36C18 45 24 51 32 54C40 51 46 45 46 36V30C46 30 40 26 32 26Z" fill="#EAF8EF" stroke="#16A34A" stroke-width="2"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Worum geht’s hier?</h3>
+            <p>
+              Um die <b>Absicherung Ihres Hauses</b> (Wohngebäudeversicherung) – und darum,
+              ob Sie einen besseren Beitrag bei passendem Schutz bekommen können.
+            </p>
+          </div>
+        </div>
+
+        <div class="trustBox">
+          <b>So läuft’s ab:</b>
+          <div class="muted" style="margin-top:6px;">
+            1) Gebäude-Details → 2) PLZ & Eckdaten → 3) Kontakt → 4) Vergleich erhalten
+          </div>
+          <div class="trustRow">
+            <span class="chip">Kostenlos</span>
+            <span class="chip">Unverbindlich</span>
+            <span class="chip">Datenschutz</span>
+          </div>
         </div>
 
         <div class="hr"></div>
 
         <h2 class="h2">Worauf wir beim Vergleich achten</h2>
         <ul class="list">
-          <li>passender Versicherungswert (z. B. <strong>Wert 1914</strong> / gleitender Neuwert)</li>
-          <li>Unterversicherung vermeiden (z. B. Unterversicherungsverzicht, wenn möglich)</li>
-          <li>Leistungsbausteine: grobe Fahrlässigkeit, Rohre, Aufräum-/Abbruchkosten</li>
-          <li>Elementarrisiko: Starkregen/Rückstau/Überschwemmung je nach Region</li>
+          <li>Versicherungswert korrekt → keine Unterversicherung</li>
+          <li>Leistungsbausteine: grobe Fahrlässigkeit, Rohre, Aufräumkosten</li>
+          <li>Elementar-Risiko (Starkregen/Rückstau) je nach Region</li>
         </ul>
       </aside>
     </section>
 
     <section class="cards">
       <a class="card linkCard" href="kosten.html">
-        <h3>💸 Kosten & Beitrag</h3>
-        <p>Wie berechnet sich der Beitrag – und welche Faktoren treiben ihn hoch?</p>
-        <span class="btn btn--ghost">Kosten verstehen</span>
+        <h3>💶 Was kostet eine Wohngebäudeversicherung?</h3>
+        <p>Die wichtigsten Preisfaktoren – einfach erklärt.</p>
+        <span class="btn">Kosten verstehen</span>
       </a>
 
       <a class="card linkCard" href="beitragserhoehung.html">
-        <h3>📈 Beitragserhöhung</h3>
-        <p>Viele suchen genau dann nach Alternativen. Sonderkündigung & Wechselhilfe.</p>
-        <span class="btn btn--ghost">Jetzt prüfen</span>
+        <h3>📈 Beitragserhöhung erhalten?</h3>
+        <p>Welche Optionen sinnvoll sind – ohne Schutzlücke.</p>
+        <span class="btn">Wechselhilfe</span>
       </a>
 
       <a class="card linkCard" href="elementar.html">
-        <h3>🌧️ Elementar</h3>
-        <p>Starkregen, Rückstau, Überschwemmung: wann lohnt sich der Zusatzbaustein?</p>
-        <span class="btn btn--ghost">Elementar-Guide</span>
+        <h3>🌧️ Elementar: Starkregen & Rückstau</h3>
+        <p>Wann es sich lohnt und worauf man achten sollte.</p>
+        <span class="btn">Elementar-Guide</span>
       </a>
     </section>
 
@@ -402,18 +469,18 @@
       <h2>Häufige Fragen</h2>
 
       <details class="faqItem">
-        <summary>Wird die Wohngebäudeversicherung 2026 teurer?</summary>
-        <p>Beiträge können durch Baukosten-/Neuwertfaktoren und Schadenentwicklung steigen. Ein Vergleich hilft, Beitrag und Leistung neu zu optimieren.</p>
+        <summary>Was ist in der Wohngebäudeversicherung typischerweise versichert?</summary>
+        <p>Meist Feuer, Leitungswasser sowie Sturm/Hagel. Elementarschäden (z. B. Starkregen/Überschwemmung/Rückstau) sind häufig optional.</p>
       </details>
 
       <details class="faqItem">
-        <summary>Ist Elementarschutz Pflicht?</summary>
-        <p>Meist nicht generell. In vielen Regionen ist Elementar aber sinnvoll (Starkregen, Rückstau, Überschwemmung).</p>
+        <summary>Warum steigen Beiträge oft jedes Jahr?</summary>
+        <p>U. a. durch Baukosten-/Neuwertfaktoren und die Schadenentwicklung. Ein Vergleich kann helfen, Beitrag und Leistung neu zu optimieren.</p>
       </details>
 
       <div class="ctaRow">
         <button type="button" class="btn btn--primary" id="openSparCheckBottom">Spar-Check starten</button>
-        <a class="btn btn--ghost" href="spezialfaelle.html">Spezialfälle ansehen</a>
+        <a class="btn" href="spezialfaelle.html">Spezialfälle ansehen</a>
       </div>
     </section>
   </main>
@@ -437,7 +504,7 @@
       <div class="modal__head">
         <div>
           <div class="modal__kicker">✅ Spar-Check (kostenlos & unverbindlich)</div>
-          <h2 id="sparTitle" class="modal__title">Bitte kurz ausfüllen – wir senden Ihnen die Auswertung</h2>
+          <h2 id="sparTitle" class="modal__title">Kurze Angaben – wir senden Ihnen den Vergleich</h2>
         </div>
         <button type="button" class="iconBtn" data-close aria-label="Schließen">✕</button>
       </div>
@@ -478,7 +545,7 @@
             <input class="input" name="plz" id="plz" inputmode="numeric" placeholder="z. B. 10115" required />
             <div class="err" data-err="plz"></div>
             <div class="stepNav">
-              <button type="button" class="btn btn--ghost" data-back>Zurück</button>
+              <button type="button" class="btn" data-back>Zurück</button>
               <button type="button" class="btn btn--primary" data-next>Weiter</button>
             </div>
           </section>
@@ -493,7 +560,7 @@
             <div class="err" data-err="wohnflaeche"></div>
 
             <div class="stepNav">
-              <button type="button" class="btn btn--ghost" data-back>Zurück</button>
+              <button type="button" class="btn" data-back>Zurück</button>
               <button type="button" class="btn btn--primary" data-next>Weiter</button>
             </div>
           </section>
@@ -514,16 +581,16 @@
             </select>
 
             <div class="stepNav">
-              <button type="button" class="btn btn--ghost" data-back>Zurück</button>
+              <button type="button" class="btn" data-back>Zurück</button>
               <button type="button" class="btn btn--primary" data-next>Weiter</button>
             </div>
           </section>
 
           <section class="step" data-step="5">
             <div class="resultBox">
-              <div class="resultBox__title">📍 Ergebnis-Hinweis</div>
+              <div class="resultBox__title">📍 Ihr Vergleich ist fast fertig</div>
               <div class="resultBox__text">
-                Wir haben ein Sparpotenzial für Ihre PLZ gefunden. Wohin dürfen wir den Vergleich senden?
+                Wohin dürfen wir Ihnen den Vergleich zur Wohngebäudeversicherung senden?
               </div>
             </div>
 
@@ -540,7 +607,7 @@
             <div class="err" data-err="telefon"></div>
 
             <div class="stepNav">
-              <button type="button" class="btn btn--ghost" data-back>Zurück</button>
+              <button type="button" class="btn" data-back>Zurück</button>
               <button type="button" class="btn btn--primary" data-next>Weiter</button>
             </div>
           </section>
@@ -549,8 +616,7 @@
             <label class="check">
               <input type="checkbox" id="dsgvo" required />
               <span>
-                Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und bin einverstanden,
-                dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden.
+                Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und bin einverstanden.
               </span>
             </label>
             <div class="err" data-err="dsgvo"></div>
@@ -560,7 +626,7 @@
             </div>
 
             <div class="stepNav">
-              <button type="button" class="btn btn--ghost" data-back>Zurück</button>
+              <button type="button" class="btn" data-back>Zurück</button>
               <button type="submit" class="btn btn--primary">Vergleich anfordern</button>
             </div>
           </section>
@@ -669,7 +735,6 @@
         return true;
       }
 
-      // Open buttons (kein href="#" => kein Hochspringen)
       ["#openSparCheck","#openSparCheckTop","#openSparCheckBottom"].forEach(sel=>{
         const btn = qs(sel);
         if(btn){
@@ -684,7 +749,6 @@
         }
       });
 
-      // Close
       qsa("[data-close]", modal).forEach(el=>{
         el.addEventListener("click", (e)=>{ e.preventDefault(); closeModal(); });
       });
@@ -692,7 +756,6 @@
         if(e.key==="Escape" && modal?.classList.contains("is-open")) closeModal();
       });
 
-      // Next/Back buttons (delegation)
       if(form){
         form.addEventListener("click",(e)=>{
           const t = e.target;
@@ -709,7 +772,6 @@
           }
         });
 
-        // Submit: Vorschau -> danke screen
         form.addEventListener("submit",(e)=>{
           e.preventDefault();
           if(!validate(6)) return;
