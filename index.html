@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Wohngebäudeversicherung 2026 – Haus absichern & Sparpotenzial prüfen</title>
-  <meta name="description" content="Wohngebäudeversicherung für Ihr Haus: Feuer, Leitungswasser, Sturm/Hagel – Elementar optional. Spar-Check in 2 Minuten (typisch 10–30%, teils bis 40%)." />
+  <title>Wohngebäudeversicherung – Neu abschließen oder Beitrag prüfen</title>
+  <meta name="description" content="Wohngebäudeversicherung für Ihr Haus: Neu abschließen oder bestehenden Beitrag prüfen. In 2 Minuten Anfrage senden – kostenlos & unverbindlich." />
   <meta name="robots" content="noindex,nofollow" />
 
   <style>
@@ -24,13 +24,9 @@
       --radius2: 14px;
       --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
     }
-
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
-      margin:0;
-      font-family:var(--font);
-      color:var(--text);
+      margin:0; font-family:var(--font); color:var(--text);
       background:
         radial-gradient(900px 420px at 15% 10%, #e9f3ff 0%, transparent 55%),
         radial-gradient(900px 420px at 85% 10%, #eaf8ef 0%, transparent 55%),
@@ -38,254 +34,180 @@
     }
     a{color:var(--primary); text-decoration:none}
     a:hover{text-decoration:underline}
-    .container{max-width:1120px; margin:0 auto; padding:0 18px}
+    .container{max-width:1020px; margin:0 auto; padding:0 18px}
 
-    /* Topbar */
+    /* Top minimal */
     .topbar{
-      position:sticky; top:0; z-index:50;
-      background: rgba(255,255,255,.85);
+      position:sticky; top:0; z-index:30;
+      background: rgba(255,255,255,.86);
       backdrop-filter: blur(10px);
       border-bottom:1px solid var(--border);
     }
     .topbar__inner{
       display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
-      gap:14px;
+      padding:12px 0; gap:10px;
     }
     .brand{display:flex; align-items:center; gap:10px}
     .brand__logo{
-      width:36px; height:36px; border-radius:12px;
+      width:38px; height:38px; border-radius:12px;
       background: linear-gradient(135deg, var(--primary), var(--primary2));
-      box-shadow: 0 10px 22px rgba(27,118,255,.22);
-      display:inline-flex; align-items:center; justify-content:center;
-      color:white; font-weight:900;
+      box-shadow: 0 10px 22px rgba(27,118,255,.20);
+      display:flex; align-items:center; justify-content:center;
+      color:#fff; font-weight:900;
     }
-    .brand__name{font-weight:800; letter-spacing:.2px}
+    .brand__name{font-weight:900; letter-spacing:.2px}
     .brand__sub{display:block; font-size:12px; color:var(--muted); margin-top:2px}
+    .miniTrust{font-size:13px; color:var(--muted); text-align:right}
+    .miniTrust b{color:#0f6a2c}
 
-    .nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end}
-    .nav__link{
-      padding:10px 12px;
-      border:1px solid var(--border);
-      border-radius:999px;
-      background: #fff;
-      color:var(--text);
-      font-size:14px;
-    }
-    .nav__link:hover{background: #f3f6fb; text-decoration:none}
-    .nav__cta{
-      border:1px solid rgba(27,118,255,.25);
-      border-radius:999px;
-      padding:10px 14px;
-      background: linear-gradient(135deg, rgba(27,118,255,.12), rgba(14,165,233,.10));
-      color:var(--text);
-      font-weight:800;
-      cursor:pointer;
-    }
-    .nav__cta:hover{filter:brightness(1.02)}
-
-    /* Cards */
+    /* Layout */
     .card{
       border:1px solid var(--border);
-      background: var(--card);
+      background:var(--card);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
-    .card--soft{
-      border-radius: var(--radius2);
-      background: #fbfcff;
-      border:1px solid var(--border);
-      padding:14px;
-    }
-
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid #cfe2ff;
-      background: var(--blueSoft);
-      color:#1b4fd6;
-      font-size:13px;
-      font-weight:700;
-      margin-bottom:12px;
-    }
-
-    /* Hero */
     .hero{
       display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:18px;
-      padding:18px 0 10px;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+      padding:18px 0 12px;
       align-items:stretch;
     }
     .hero__left{padding:24px}
     .hero__right{padding:24px}
 
-    h1{margin:8px 0 10px; font-size:40px; line-height:1.08}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px; border-radius:999px;
+      border:1px solid #cfe2ff; background:var(--blueSoft);
+      color:#1b4fd6; font-size:13px; font-weight:800;
+      margin-bottom:12px;
+    }
+    h1{margin:8px 0 10px; font-size:38px; line-height:1.08}
     .lead{margin:0 0 14px; color:var(--muted); font-size:16px; line-height:1.55}
 
-    .highlightRow{
-      display:flex; gap:10px; flex-wrap:wrap;
-      margin:12px 0 14px;
+    .choiceGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top:14px;
     }
-    .badge{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:10px 12px;
+    .choice{
+      border:1px solid var(--border);
+      border-radius: 16px;
+      padding:16px;
+      background:#fff;
+      cursor:pointer;
+      transition: transform .08s ease, box-shadow .08s ease;
+    }
+    .choice:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(16,24,40,.08);
+    }
+    .choice__top{display:flex; align-items:center; gap:10px; margin-bottom:8px}
+    .choice__icon{
+      width:38px; height:38px; border-radius:12px;
+      display:flex; align-items:center; justify-content:center;
+      background:#f3f6fb; font-size:18px;
+    }
+    .choice__title{font-weight:900; font-size:16px; margin:0}
+    .choice__text{margin:6px 0 12px; color:var(--muted); font-size:13.5px; line-height:1.45}
+    .choice__btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:11px 12px;
       border-radius: 12px;
       border:1px solid var(--border);
       background:#fff;
-      color:var(--text);
-      font-size:13px;
-      font-weight:700;
-    }
-    .badge i{
-      width:22px; height:22px; border-radius:8px;
-      display:inline-flex; align-items:center; justify-content:center;
-      background: #f3f6fb;
-      font-style:normal;
-    }
-
-    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 10px}
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      padding:12px 14px;
-      border-radius: 12px;
-      border:1px solid var(--border);
+      font-weight:900;
       cursor:pointer;
-      font-weight:800;
-      color:var(--text);
-      background: #fff;
+      width:100%;
     }
-    .btn:hover{background:#f3f6fb; text-decoration:none}
-    .btn--primary{
-      border:none;
+    .choice__btn--primary{
+      border:none; color:#fff;
       background: linear-gradient(135deg, var(--primary), var(--primary2));
-      color: white;
       box-shadow: 0 10px 22px rgba(27,118,255,.18);
     }
-    .btn--ghost{background:#fff}
 
-    .note{
-      margin-top:12px;
-      color: var(--muted);
-      font-size:13px;
-      border:1px solid var(--border);
-      background: #fbfcff;
-      border-radius: 12px;
-      padding:12px;
-    }
-
-    .label{display:block; margin:10px 0 6px; color:var(--muted); font-size:13px; font-weight:700}
-    .input{
-      width:100%;
-      padding:12px 12px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background: #fff;
-      color: var(--text);
-      outline:none;
-    }
-    .input:focus{border-color: rgba(27,118,255,.45); box-shadow: 0 0 0 3px rgba(27,118,255,.12)}
-
-    .hr{height:1px; background: var(--border); margin:16px 0}
-    .h2{font-size:18px; margin:0 0 8px}
-    .list{margin:0; padding-left:18px; color: var(--muted); line-height:1.7}
-
-    /* Right visual */
-    .heroVisual{
-      display:flex; gap:14px; align-items:flex-start;
-      padding:14px;
-      border-radius: 16px;
-      border:1px solid var(--border);
-      background: linear-gradient(180deg, #ffffff, #f7fbff);
-    }
-    .houseSvg{
-      width:86px; height:86px;
-      flex:0 0 auto;
-      border-radius: 18px;
-      border:1px solid var(--border);
-      background: #fff;
-      display:flex; align-items:center; justify-content:center;
-      box-shadow: 0 8px 20px rgba(16,24,40,.06);
-    }
-    .heroVisual h3{margin:0 0 6px; font-size:16px}
-    .heroVisual p{margin:0; color:var(--muted); line-height:1.5; font-size:13px}
-
-    .trustBox{
+    .benefits{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
       margin-top:14px;
-      border:1px solid #cfead6;
-      background: var(--greenSoft);
+    }
+    .benefit{
+      border:1px solid var(--border);
+      background:#fbfcff;
       border-radius: 14px;
       padding:12px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
     }
-    .trustBox b{color:#0f6a2c}
-    .trustRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .benefit b{color:var(--text)}
+
+    /* Right column trust */
+    .box{
+      border:1px solid #cfead6;
+      background: var(--greenSoft);
+      border-radius: 16px;
+      padding:14px;
+    }
+    .box h3{margin:0 0 8px; font-size:16px}
+    .box p{margin:0; color:var(--muted); line-height:1.5; font-size:13.5px}
+    .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
     .chip{
       padding:8px 10px;
       border-radius:999px;
       border:1px solid #cfead6;
       background:#fff;
       font-size:13px;
-      font-weight:700;
+      font-weight:800;
       color:#0f6a2c;
     }
 
-    /* Link cards */
-    .cards{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:14px;
-      padding:12px 0 10px;
-    }
-    .linkCard{padding:18px}
-    .linkCard h3{margin:0 0 8px}
-    .linkCard p{margin:0 0 12px; color: var(--muted); line-height:1.5}
-
-    /* FAQ */
-    .faq{padding:12px 0 28px}
-    .faq h2{margin:0 0 12px}
-    .faqItem{
+    .covered{
+      margin-top:14px;
       border:1px solid var(--border);
-      background: #fff;
-      border-radius: 14px;
-      padding:12px 14px;
-      margin-bottom:10px;
+      border-radius: 16px;
+      background:#fff;
+      padding:14px;
     }
-    .faqItem summary{cursor:pointer; font-weight:900}
-    .faqItem p{color: var(--muted); line-height:1.6}
+    .covered h3{margin:0 0 8px; font-size:16px}
+    .tags{display:flex; flex-wrap:wrap; gap:8px}
+    .tag{
+      padding:8px 10px; border-radius:999px;
+      border:1px solid var(--border); background:#fbfcff;
+      font-size:13px; font-weight:800; color:#24324a;
+    }
+    .tag--muted{color:var(--muted); font-weight:700}
 
-    /* Footer */
+    /* Footer minimal */
     .footer{
+      margin-top:18px;
       border-top:1px solid var(--border);
-      background: #fff;
+      background:#fff;
     }
     .footer__inner{
       display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0; gap:10px; flex-wrap:wrap;
+      gap:10px; flex-wrap:wrap;
+      padding:14px 0;
+      color:var(--muted);
+      font-size:13px;
     }
     .footer__links{display:flex; gap:12px}
-    .muted{color:var(--muted); font-size:13px}
 
-    /* MODAL */
+    /* Modal / Funnel */
     .modal{position:fixed; inset:0; display:none; z-index:100}
     .modal.is-open{display:block}
-    .modal__overlay{
-      position:absolute; inset:0;
-      background: rgba(11,18,32,.45);
-      backdrop-filter: blur(4px);
-    }
+    .modal__overlay{position:absolute; inset:0; background: rgba(11,18,32,.45); backdrop-filter: blur(4px)}
     .modal__panel{
       position:relative;
-      width:min(820px, calc(100% - 24px));
+      width:min(860px, calc(100% - 24px));
       margin: 70px auto 24px;
       border-radius: 18px;
       border:1px solid var(--border);
-      background: #fff;
+      background:#fff;
       box-shadow: 0 26px 120px rgba(11,18,32,.22);
       padding: 18px;
       max-height: calc(100vh - 94px);
@@ -300,7 +222,7 @@
     .modal__title{margin:6px 0 0; font-size:18px}
     .iconBtn{
       border:1px solid var(--border);
-      background: #fff;
+      background:#fff;
       color:var(--text);
       border-radius: 12px;
       padding:10px 12px;
@@ -310,21 +232,47 @@
     .iconBtn:hover{background:#f3f6fb}
 
     .stepBar{display:flex; gap:8px; padding:14px 0}
-    .stepDot{
-      height:8px; flex:1;
-      border-radius:999px;
-      background: #eef2f8;
-    }
+    .stepDot{height:8px; flex:1; border-radius:999px; background:#eef2f8}
     .stepDot.is-active{background: linear-gradient(135deg, var(--primary), var(--primary2))}
 
     .form{margin-top:6px}
     .step{display:none}
     .step.is-active{display:block}
 
-    .stepNav{
-      display:flex; justify-content:space-between; gap:10px; margin-top:14px;
+    .label{display:block; margin:10px 0 6px; color:var(--muted); font-size:13px; font-weight:800}
+    .input{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:#fff;
+      color:var(--text);
+      outline:none;
     }
-    .err{color: #c02626; font-size:13px; margin-top:6px; min-height:18px}
+    .input:focus{border-color: rgba(27,118,255,.45); box-shadow: 0 0 0 3px rgba(27,118,255,.12)}
+    .err{color:#c02626; font-size:13px; margin-top:6px; min-height:18px}
+
+    .row2{display:grid; grid-template-columns: 1fr 1fr; gap:10px}
+    .stepNav{display:flex; justify-content:space-between; gap:10px; margin-top:14px}
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:8px;
+      padding:12px 14px;
+      border-radius: 12px;
+      border:1px solid var(--border);
+      cursor:pointer;
+      font-weight:900;
+      color:var(--text);
+      background:#fff;
+      width:auto;
+    }
+    .btn:hover{background:#f3f6fb}
+    .btn--primary{
+      border:none; color:#fff;
+      background: linear-gradient(135deg, var(--primary), var(--primary2));
+      box-shadow: 0 10px 22px rgba(27,118,255,.18);
+    }
 
     .resultBox{
       border:1px solid #cfe2ff;
@@ -334,167 +282,129 @@
       margin-bottom:12px;
     }
     .resultBox__title{font-weight:900; color:#1b4fd6}
-    .resultBox__text{color: #334155; margin-top:4px; line-height:1.45}
+    .resultBox__text{color:#334155; margin-top:4px; line-height:1.45}
+
     .check{
       display:flex; gap:10px; align-items:flex-start;
       padding:12px;
       border-radius:14px;
       border:1px solid var(--border);
-      background: #fbfcff;
+      background:#fbfcff;
     }
     .check input{margin-top:3px}
 
     @media (max-width: 980px){
       .hero{grid-template-columns:1fr}
-      h1{font-size:34px}
-      .cards{grid-template-columns:1fr}
-      .nav{justify-content:flex-start}
+      h1{font-size:32px}
+      .choiceGrid{grid-template-columns:1fr}
+      .benefits{grid-template-columns:1fr}
+      .row2{grid-template-columns:1fr}
       .modal__panel{margin-top:54px}
+      .miniTrust{text-align:left}
     }
   </style>
 </head>
 
 <body>
+  <!-- Minimal header (kein Menü, keine Ablenkung) -->
   <header class="topbar">
     <div class="container topbar__inner">
-      <div class="brand" aria-label="Startseite">
-        <span class="brand__logo" aria-hidden="true">🏠</span>
+      <div class="brand">
+        <div class="brand__logo">🏠</div>
         <div>
-          <span class="brand__name">Wohngebäude-SparCheck</span>
-          <span class="brand__sub">Absicherung fürs Haus + Beitrag prüfen</span>
+          <div class="brand__name">Wohngebäude-SparCheck</div>
+          <span class="brand__sub">Neu abschließen oder bestehenden Beitrag prüfen</span>
         </div>
       </div>
 
-      <nav class="nav">
-        <a class="nav__link" href="kosten.html">Kosten</a>
-        <a class="nav__link" href="beitragserhoehung.html">Beitragserhöhung</a>
-        <a class="nav__link" href="elementar.html">Elementar</a>
-        <a class="nav__link" href="spezialfaelle.html">Spezialfälle</a>
-        <button type="button" class="nav__cta" id="openSparCheckTop">Spar-Check starten</button>
-      </nav>
+      <div class="miniTrust">
+        <div><b>Kostenlos</b> & unverbindlich</div>
+        <div>2 Minuten • Datenschutz</div>
+      </div>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
       <div class="hero__left card">
-        <div class="pill">✅ Wohngebäudeversicherung 2026</div>
-        <h1>Schützen Sie Ihr Haus – und prüfen Sie, ob Sie zu viel zahlen</h1>
+        <div class="pill">✅ Wohngebäudeversicherung</div>
+        <h1>Absicherung fürs Haus – mit 2 klaren Optionen</h1>
         <p class="lead">
-          Eine Wohngebäudeversicherung sichert Ihr Eigentum gegen zentrale Risiken ab.
-          Wir prüfen anhand weniger Angaben (PLZ, Gebäudetyp, Baujahr, Wohnfläche), ob ein günstigerer Tarif möglich ist.
-          <b>Typisch 10–30%</b>, in Einzelfällen <b>bis zu 40%</b>.
+          Wählen Sie, was Sie vorhaben: <b>Neu abschließen</b> oder <b>bestehende Police prüfen</b>.
+          Sie erhalten anschließend einen passenden Vergleich – ohne Bindung.
         </p>
 
-        <div class="highlightRow">
-          <span class="badge"><i>🔥</i> Feuer</span>
-          <span class="badge"><i>💧</i> Leitungswasser</span>
-          <span class="badge"><i>🌬️</i> Sturm & Hagel</span>
-          <span class="badge"><i>🌧️</i> Elementar optional</span>
+        <div class="choiceGrid">
+          <div class="choice" role="button" tabindex="0" data-start="neu">
+            <div class="choice__top">
+              <div class="choice__icon">🆕</div>
+              <div>
+                <p class="choice__title">Neu abschließen</p>
+                <div class="choice__text">Sie brauchen erstmals eine Wohngebäudeversicherung (z. B. Hauskauf / Neubau / Wechsel geplant).</div>
+              </div>
+            </div>
+            <button type="button" class="choice__btn choice__btn--primary">Jetzt neu anfragen</button>
+          </div>
+
+          <div class="choice" role="button" tabindex="0" data-start="check">
+            <div class="choice__top">
+              <div class="choice__icon">🔍</div>
+              <div>
+                <p class="choice__title">Bestehende prüfen</p>
+                <div class="choice__text">Sie haben schon eine Police und wollen prüfen, ob es <b>günstiger</b> geht – bei passendem Schutz.</div>
+              </div>
+            </div>
+            <button type="button" class="choice__btn">Beitrag prüfen</button>
+          </div>
         </div>
 
-        <div class="ctaRow">
-          <button type="button" class="btn btn--primary" id="openSparCheck">Spar-Check starten</button>
-          <a class="btn btn--ghost" href="beitragserhoehung.html">Ich hatte eine Beitragserhöhung →</a>
-        </div>
-
-        <div class="note">
-          <b>Wichtig:</b> Wir achten auf passenden Versicherungswert (z. B. Wert 1914/gleitender Neuwert),
-          damit keine Unterversicherung entsteht und Ihr Haus sauber abgesichert bleibt.
+        <div class="benefits">
+          <div class="benefit"><b>Fokus:</b> Lead-Check statt Informations-Seite. Keine Ablenkung – direkte Anfrage.</div>
+          <div class="benefit"><b>Wichtig:</b> Wir achten auf korrekten Versicherungswert (Unterversicherung vermeiden).</div>
+          <div class="benefit"><b>Typisch versichert:</b> Feuer, Leitungswasser, Sturm/Hagel.</div>
+          <div class="benefit"><b>Optional:</b> Elementar (Starkregen/Rückstau/Überschwemmung) je nach Region.</div>
         </div>
       </div>
 
       <aside class="hero__right card">
-        <div class="heroVisual">
-          <div class="houseSvg" aria-hidden="true">
-            <!-- simple house shield icon -->
-            <svg width="52" height="52" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 30L32 12L54 30V54H38V40H26V54H10V30Z" fill="#E9F3FF" stroke="#1B76FF" stroke-width="2"/>
-              <path d="M32 26C24 26 18 30 18 30V36C18 45 24 51 32 54C40 51 46 45 46 36V30C46 30 40 26 32 26Z" fill="#EAF8EF" stroke="#16A34A" stroke-width="2"/>
-            </svg>
-          </div>
-          <div>
-            <h3>Worum geht’s hier?</h3>
-            <p>
-              Um die <b>Absicherung Ihres Hauses</b> (Wohngebäudeversicherung) – und darum,
-              ob Sie einen besseren Beitrag bei passendem Schutz bekommen können.
-            </p>
-          </div>
-        </div>
-
-        <div class="trustBox">
-          <b>So läuft’s ab:</b>
-          <div class="muted" style="margin-top:6px;">
-            1) Gebäude-Details → 2) PLZ & Eckdaten → 3) Kontakt → 4) Vergleich erhalten
-          </div>
-          <div class="trustRow">
+        <div class="box">
+          <h3>So läuft’s ab</h3>
+          <p>
+            1) Gebäude-Eckdaten → 2) (bei Check) aktueller Beitrag/Anbieter → 3) Kontaktdaten →
+            4) Vergleich erhalten.
+          </p>
+          <div class="chips">
             <span class="chip">Kostenlos</span>
             <span class="chip">Unverbindlich</span>
             <span class="chip">Datenschutz</span>
           </div>
         </div>
 
-        <div class="hr"></div>
-
-        <h2 class="h2">Worauf wir beim Vergleich achten</h2>
-        <ul class="list">
-          <li>Versicherungswert korrekt → keine Unterversicherung</li>
-          <li>Leistungsbausteine: grobe Fahrlässigkeit, Rohre, Aufräumkosten</li>
-          <li>Elementar-Risiko (Starkregen/Rückstau) je nach Region</li>
-        </ul>
+        <div class="covered">
+          <h3>Worum geht’s genau?</h3>
+          <div class="tags">
+            <span class="tag">🔥 Feuer</span>
+            <span class="tag">💧 Leitungswasser</span>
+            <span class="tag">🌬️ Sturm/Hagel</span>
+            <span class="tag tag--muted">🌧️ Elementar optional</span>
+          </div>
+          <p style="margin:10px 0 0; color:var(--muted); line-height:1.55; font-size:13.5px;">
+            Ziel: Ihr Haus passend absichern – und prüfen, ob Preis/Leistung verbessert werden kann.
+          </p>
+        </div>
       </aside>
     </section>
 
-    <section class="cards">
-      <a class="card linkCard" href="kosten.html">
-        <h3>💶 Was kostet eine Wohngebäudeversicherung?</h3>
-        <p>Die wichtigsten Preisfaktoren – einfach erklärt.</p>
-        <span class="btn">Kosten verstehen</span>
-      </a>
-
-      <a class="card linkCard" href="beitragserhoehung.html">
-        <h3>📈 Beitragserhöhung erhalten?</h3>
-        <p>Welche Optionen sinnvoll sind – ohne Schutzlücke.</p>
-        <span class="btn">Wechselhilfe</span>
-      </a>
-
-      <a class="card linkCard" href="elementar.html">
-        <h3>🌧️ Elementar: Starkregen & Rückstau</h3>
-        <p>Wann es sich lohnt und worauf man achten sollte.</p>
-        <span class="btn">Elementar-Guide</span>
-      </a>
-    </section>
-
-    <section class="faq">
-      <h2>Häufige Fragen</h2>
-
-      <details class="faqItem">
-        <summary>Was ist in der Wohngebäudeversicherung typischerweise versichert?</summary>
-        <p>Meist Feuer, Leitungswasser sowie Sturm/Hagel. Elementarschäden (z. B. Starkregen/Überschwemmung/Rückstau) sind häufig optional.</p>
-      </details>
-
-      <details class="faqItem">
-        <summary>Warum steigen Beiträge oft jedes Jahr?</summary>
-        <p>U. a. durch Baukosten-/Neuwertfaktoren und die Schadenentwicklung. Ein Vergleich kann helfen, Beitrag und Leistung neu zu optimieren.</p>
-      </details>
-
-      <div class="ctaRow">
-        <button type="button" class="btn btn--primary" id="openSparCheckBottom">Spar-Check starten</button>
-        <a class="btn" href="spezialfaelle.html">Spezialfälle ansehen</a>
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>© 2026 Wohngebäude-SparCheck • Vorschau-Modus (noindex)</div>
+        <div class="footer__links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
       </div>
-    </section>
+    </footer>
   </main>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div>© 2026 Wohngebäude-SparCheck</div>
-      <div class="footer__links">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </div>
-      <div class="muted">Vorschau-Modus (noindex)</div>
-    </div>
-  </footer>
 
   <!-- MODAL / FUNNEL -->
   <div class="modal" id="sparcheckModal" aria-hidden="true">
@@ -503,162 +413,210 @@
     <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="sparTitle">
       <div class="modal__head">
         <div>
-          <div class="modal__kicker">✅ Spar-Check (kostenlos & unverbindlich)</div>
-          <h2 id="sparTitle" class="modal__title">Kurze Angaben – wir senden Ihnen den Vergleich</h2>
+          <div class="modal__kicker">✅ Anfrage – kostenlos & unverbindlich</div>
+          <h2 id="sparTitle" class="modal__title">
+            <span id="modeTitle">Bitte kurz ausfüllen</span>
+          </h2>
         </div>
         <button type="button" class="iconBtn" data-close aria-label="Schließen">✕</button>
       </div>
 
-      <div class="steps">
-        <div class="stepBar">
-          <div class="stepDot is-active" data-dot="1"></div>
-          <div class="stepDot" data-dot="2"></div>
-          <div class="stepDot" data-dot="3"></div>
-          <div class="stepDot" data-dot="4"></div>
-          <div class="stepDot" data-dot="5"></div>
-          <div class="stepDot" data-dot="6"></div>
+      <div class="stepBar" aria-hidden="true">
+        <div class="stepDot is-active" data-dot="1"></div>
+        <div class="stepDot" data-dot="2"></div>
+        <div class="stepDot" data-dot="3"></div>
+        <div class="stepDot" data-dot="4"></div>
+        <div class="stepDot" data-dot="5"></div>
+      </div>
+
+      <form id="leadForm" class="form" method="POST" action="#">
+        <!-- Hidden mode -->
+        <input type="hidden" id="mode" name="modus" value="neu" />
+
+        <!-- Step 1: Gebäudetyp + Nutzung -->
+        <section class="step is-active" data-step="1">
+          <label class="label">Gebäudetyp</label>
+          <select class="input" name="gebaeudetyp" id="gebaeudetyp" required>
+            <option value="">Bitte wählen…</option>
+            <option>Einfamilienhaus (EFH)</option>
+            <option>Doppelhaushälfte (DHH)</option>
+            <option>Reihenhaus</option>
+            <option>Mehrfamilienhaus (MFH)</option>
+            <option>Ferien-/Wochenendhaus</option>
+            <option>Fachwerkhaus</option>
+            <option>Denkmalgeschützte Immobilie</option>
+            <option>Reetdachhaus</option>
+            <option>Sonstiges</option>
+          </select>
+          <div class="err" data-err="gebaeudetyp"></div>
+
+          <label class="label" style="margin-top:12px;">PLZ</label>
+          <input class="input" name="plz" id="plz" inputmode="numeric" placeholder="z. B. 10115" required />
+          <div class="err" data-err="plz"></div>
+
+          <div class="stepNav">
+            <button type="button" class="btn" data-close>Abbrechen</button>
+            <button type="button" class="btn btn--primary" data-next>Weiter</button>
+          </div>
+        </section>
+
+        <!-- Step 2: Baujahr / Wohnfläche -->
+        <section class="step" data-step="2">
+          <div class="row2">
+            <div>
+              <label class="label">Baujahr</label>
+              <input class="input" name="baujahr" id="baujahr" inputmode="numeric" placeholder="z. B. 1998" required />
+              <div class="err" data-err="baujahr"></div>
+            </div>
+            <div>
+              <label class="label">Wohnfläche (m²)</label>
+              <input class="input" name="wohnflaeche" id="wohnflaeche" inputmode="numeric" placeholder="z. B. 120" required />
+              <div class="err" data-err="wohnflaeche"></div>
+            </div>
+          </div>
+
+          <label class="label" style="margin-top:12px;">Elementar gewünscht / vorhanden?</label>
+          <select class="input" name="elementar" id="elementarSel">
+            <option value="">Bitte wählen…</option>
+            <option value="ja">Ja</option>
+            <option value="nein">Nein</option>
+            <option value="unsicher">Weiß ich nicht</option>
+          </select>
+
+          <div class="stepNav">
+            <button type="button" class="btn" data-back>Zurück</button>
+            <button type="button" class="btn btn--primary" data-next>Weiter</button>
+          </div>
+        </section>
+
+        <!-- Step 3: Nur wenn "check" -> aktueller Anbieter / Beitrag -->
+        <section class="step" data-step="3" id="stepCheckOnly">
+          <div class="resultBox">
+            <div class="resultBox__title">🔍 Bestehende Police prüfen</div>
+            <div class="resultBox__text">
+              Wenn Sie den aktuellen Beitrag kennen, können wir gezielter vergleichen. (Optional, aber empfohlen.)
+            </div>
+          </div>
+
+          <label class="label">Aktueller Anbieter (optional)</label>
+          <input class="input" name="aktueller_anbieter" id="anbieter" placeholder="z. B. HUK, Allianz, AXA…" />
+
+          <label class="label" style="margin-top:12px;">Aktueller Jahresbeitrag (optional)</label>
+          <input class="input" name="jahresbeitrag" id="jahresbeitrag" inputmode="numeric" placeholder="z. B. 800" />
+
+          <div class="stepNav">
+            <button type="button" class="btn" data-back>Zurück</button>
+            <button type="button" class="btn btn--primary" data-next>Weiter</button>
+          </div>
+        </section>
+
+        <!-- Step 4: Kontaktdaten -->
+        <section class="step" data-step="4">
+          <div class="resultBox">
+            <div class="resultBox__title">📩 Wohin dürfen wir den Vergleich senden?</div>
+            <div class="resultBox__text" id="contactHint">
+              Bitte Name, E-Mail und Telefon – damit wir Rückfragen klären und den Vergleich zustellen können.
+            </div>
+          </div>
+
+          <label class="label">Name</label>
+          <input class="input" name="name" id="name" placeholder="Vor- und Nachname" required />
+          <div class="err" data-err="name"></div>
+
+          <div class="row2">
+            <div>
+              <label class="label">E-Mail</label>
+              <input class="input" name="email" id="email" type="email" placeholder="name@mail.de" required />
+              <div class="err" data-err="email"></div>
+            </div>
+            <div>
+              <label class="label">Telefon</label>
+              <input class="input" name="telefon" id="telefon" inputmode="tel" placeholder="z. B. 0176 12345678" required />
+              <div class="err" data-err="telefon"></div>
+            </div>
+          </div>
+
+          <div class="stepNav">
+            <button type="button" class="btn" data-back>Zurück</button>
+            <button type="button" class="btn btn--primary" data-next>Weiter</button>
+          </div>
+        </section>
+
+        <!-- Step 5: DSGVO + Submit -->
+        <section class="step" data-step="5">
+          <label class="check">
+            <input type="checkbox" id="dsgvo" required />
+            <span>
+              Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und bin einverstanden.
+            </span>
+          </label>
+          <div class="err" data-err="dsgvo"></div>
+
+          <p style="margin:10px 0 0; color:var(--muted); font-size:13.5px; line-height:1.5;">
+            Vorschau-Modus: Es wird nichts versendet. (Später kannst du hier Formspree/IONOS-Mail einbinden.)
+          </p>
+
+          <div class="stepNav">
+            <button type="button" class="btn" data-back>Zurück</button>
+            <button type="submit" class="btn btn--primary" id="submitBtn">Anfrage senden</button>
+          </div>
+        </section>
+      </form>
+
+      <div class="card" id="thanks" hidden style="border:1px solid var(--border); box-shadow:none; margin-top:14px; padding:14px; border-radius:16px; background:#fbfcff;">
+        <div style="font-weight:900; font-size:16px;">Danke! ✅</div>
+        <div style="color:var(--muted); margin-top:6px; line-height:1.5;">
+          Vorschau-Modus: Anfrage ist vorbereitet (keine Übertragung).
         </div>
-
-        <form id="leadForm" class="form" method="POST" action="#">
-          <section class="step is-active" data-step="1">
-            <label class="label">Gebäudetyp</label>
-            <select class="input" name="gebaeudetyp" id="gebaeudetyp" required>
-              <option value="">Bitte wählen…</option>
-              <option>Einfamilienhaus (EFH)</option>
-              <option>Doppelhaushälfte (DHH)</option>
-              <option>Reihenhaus</option>
-              <option>Mehrfamilienhaus (MFH)</option>
-              <option>Ferien-/Wochenendhaus</option>
-              <option>Fachwerkhaus</option>
-              <option>Denkmalgeschützte Immobilie</option>
-              <option>Reetdachhaus</option>
-              <option>Sonstiges</option>
-            </select>
-            <div class="err" data-err="gebaeudetyp"></div>
-            <div class="stepNav">
-              <button type="button" class="btn btn--primary" data-next>Weiter</button>
-            </div>
-          </section>
-
-          <section class="step" data-step="2">
-            <label class="label">PLZ</label>
-            <input class="input" name="plz" id="plz" inputmode="numeric" placeholder="z. B. 10115" required />
-            <div class="err" data-err="plz"></div>
-            <div class="stepNav">
-              <button type="button" class="btn" data-back>Zurück</button>
-              <button type="button" class="btn btn--primary" data-next>Weiter</button>
-            </div>
-          </section>
-
-          <section class="step" data-step="3">
-            <label class="label">Baujahr</label>
-            <input class="input" name="baujahr" id="baujahr" inputmode="numeric" placeholder="z. B. 1998" required />
-            <div class="err" data-err="baujahr"></div>
-
-            <label class="label" style="margin-top:12px;">Wohnfläche (m²)</label>
-            <input class="input" name="wohnflaeche" id="wohnflaeche" inputmode="numeric" placeholder="z. B. 120" required />
-            <div class="err" data-err="wohnflaeche"></div>
-
-            <div class="stepNav">
-              <button type="button" class="btn" data-back>Zurück</button>
-              <button type="button" class="btn btn--primary" data-next>Weiter</button>
-            </div>
-          </section>
-
-          <section class="step" data-step="4">
-            <label class="label">Aktueller Anbieter (optional)</label>
-            <input class="input" name="aktueller_anbieter" id="anbieter" placeholder="z. B. HUK, Allianz, AXA…" />
-
-            <label class="label" style="margin-top:12px;">Aktueller Jahresbeitrag (optional)</label>
-            <input class="input" name="jahresbeitrag" id="jahresbeitrag" inputmode="numeric" placeholder="z. B. 800" />
-
-            <label class="label" style="margin-top:12px;">Elementar aktuell enthalten?</label>
-            <select class="input" name="elementar" id="elementarSel">
-              <option value="">Bitte wählen…</option>
-              <option value="ja">Ja</option>
-              <option value="nein">Nein</option>
-              <option value="unsicher">Weiß ich nicht</option>
-            </select>
-
-            <div class="stepNav">
-              <button type="button" class="btn" data-back>Zurück</button>
-              <button type="button" class="btn btn--primary" data-next>Weiter</button>
-            </div>
-          </section>
-
-          <section class="step" data-step="5">
-            <div class="resultBox">
-              <div class="resultBox__title">📍 Ihr Vergleich ist fast fertig</div>
-              <div class="resultBox__text">
-                Wohin dürfen wir Ihnen den Vergleich zur Wohngebäudeversicherung senden?
-              </div>
-            </div>
-
-            <label class="label">Name</label>
-            <input class="input" name="name" id="name" placeholder="Vor- und Nachname" required />
-            <div class="err" data-err="name"></div>
-
-            <label class="label" style="margin-top:12px;">E-Mail</label>
-            <input class="input" name="email" id="email" type="email" placeholder="name@mail.de" required />
-            <div class="err" data-err="email"></div>
-
-            <label class="label" style="margin-top:12px;">Telefon</label>
-            <input class="input" name="telefon" id="telefon" inputmode="tel" placeholder="z. B. 0176 12345678" required />
-            <div class="err" data-err="telefon"></div>
-
-            <div class="stepNav">
-              <button type="button" class="btn" data-back>Zurück</button>
-              <button type="button" class="btn btn--primary" data-next>Weiter</button>
-            </div>
-          </section>
-
-          <section class="step" data-step="6">
-            <label class="check">
-              <input type="checkbox" id="dsgvo" required />
-              <span>
-                Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und bin einverstanden.
-              </span>
-            </label>
-            <div class="err" data-err="dsgvo"></div>
-
-            <div class="muted" style="margin-top:10px;">
-              Vorschau: Es wird nichts versendet.
-            </div>
-
-            <div class="stepNav">
-              <button type="button" class="btn" data-back>Zurück</button>
-              <button type="submit" class="btn btn--primary">Vergleich anfordern</button>
-            </div>
-          </section>
-        </form>
-
-        <div class="thanks" id="thanks" hidden>
-          <h3>Danke! ✅</h3>
-          <p>Vorschau-Modus: Anfrage ist vorbereitet (keine Übertragung).</p>
+        <div style="margin-top:12px;">
           <button type="button" class="btn btn--primary" data-close>Schließen</button>
         </div>
-
       </div>
+
     </div>
   </div>
 
   <script>
     (function(){
-      const qs = (s, el=document) => el.querySelector(s);
+      const qs  = (s, el=document) => el.querySelector(s);
       const qsa = (s, el=document) => Array.from(el.querySelectorAll(s));
 
       const modal = qs("#sparcheckModal");
       const form  = qs("#leadForm");
       const thanks = qs("#thanks");
+      const modeInput = qs("#mode");
+      const modeTitle = qs("#modeTitle");
+      const stepCheckOnly = qs("#stepCheckOnly");
+      const submitBtn = qs("#submitBtn");
 
-      function openModal(){
-        if(!modal) return;
+      let currentStep = 1;
+
+      function openModal(mode){
+        // mode: "neu" oder "check"
+        modeInput.value = mode;
+        modeTitle.textContent = (mode === "check")
+          ? "Beitrag prüfen – kurze Angaben"
+          : "Neu abschließen – kurze Angaben";
+
+        // Step 3 (check-only) ein/aus
+        if(mode === "check"){
+          stepCheckOnly.style.display = ""; // normal
+        } else {
+          stepCheckOnly.style.display = "none"; // überspringen
+        }
+
+        // Reset
+        currentStep = 1;
+        if(thanks) thanks.hidden = true;
+        if(form) form.style.display = "";
+        setStep(1);
+
         modal.classList.add("is-open");
         modal.setAttribute("aria-hidden","false");
         document.body.style.overflow="hidden";
       }
+
       function closeModal(){
-        if(!modal) return;
         modal.classList.remove("is-open");
         modal.setAttribute("aria-hidden","true");
         document.body.style.overflow="";
@@ -669,19 +627,32 @@
         const dot = qs(`.stepDot[data-dot="${step}"]`);
         if(dot) dot.classList.add("is-active");
       }
+
       function setStep(step){
+        // Wenn mode=neu und step=3, überspringen
+        const mode = modeInput.value;
+        if(mode !== "check" && step === 3) step = 4;
+
         qsa(".step", modal).forEach(s=>s.classList.remove("is-active"));
         const st = qs(`.step[data-step="${step}"]`, modal);
         if(st) st.classList.add("is-active");
+        currentStep = step;
         setDot(step);
+
         const panel = qs(".modal__panel", modal);
         if(panel) panel.scrollTop = 0;
+
+        // Button Text im letzten Schritt leicht anpassen
+        if(step === 5){
+          submitBtn.textContent = (mode === "check") ? "Vergleich anfordern" : "Neu-Angebot anfordern";
+        }
       }
 
       function setErr(key,msg){
         const box = qs(`[data-err="${key}"]`, modal);
         if(box) box.textContent = msg || "";
       }
+
       function validPlz(v){ return /^[0-9]{5}$/.test(String(v||"").trim()); }
       function validYear(v){
         const n=Number(String(v||"").trim()), y=new Date().getFullYear();
@@ -701,26 +672,22 @@
         return /^[+0-9()\-]{7,}$/.test(s);
       }
 
-      let currentStep = 1;
-
       function validate(step){
         ["gebaeudetyp","plz","baujahr","wohnflaeche","name","email","telefon","dsgvo"].forEach(k=>setErr(k,""));
 
         if(step===1){
-          const v=qs("#gebaeudetyp")?.value;
-          if(!v){ setErr("gebaeudetyp","Bitte Gebäudetyp auswählen."); return false; }
+          const g=qs("#gebaeudetyp")?.value;
+          const p=qs("#plz")?.value;
+          if(!g){ setErr("gebaeudetyp","Bitte Gebäudetyp auswählen."); return false; }
+          if(!validPlz(p)){ setErr("plz","Bitte eine gültige 5-stellige PLZ eingeben."); return false; }
         }
         if(step===2){
-          const v=qs("#plz")?.value;
-          if(!validPlz(v)){ setErr("plz","Bitte eine gültige 5-stellige PLZ eingeben."); return false; }
-        }
-        if(step===3){
           const y=qs("#baujahr")?.value;
           const a=qs("#wohnflaeche")?.value;
           if(!validYear(y)){ setErr("baujahr","Bitte gültiges Baujahr eingeben (z. B. 1998)."); return false; }
           if(!validArea(a)){ setErr("wohnflaeche","Bitte Wohnfläche in m² eingeben (z. B. 120)."); return false; }
         }
-        if(step===5){
+        if(step===4){
           const n=qs("#name")?.value;
           const e=qs("#email")?.value;
           const t=qs("#telefon")?.value;
@@ -728,53 +695,64 @@
           if(!validEmail(e)){ setErr("email","Bitte gültige E-Mail eingeben."); return false; }
           if(!validPhone(t)){ setErr("telefon","Bitte gültige Telefonnummer eingeben."); return false; }
         }
-        if(step===6){
+        if(step===5){
           const ok=qs("#dsgvo")?.checked;
           if(!ok){ setErr("dsgvo","Bitte Datenschutz-Zustimmung setzen."); return false; }
         }
         return true;
       }
 
-      ["#openSparCheck","#openSparCheckTop","#openSparCheckBottom"].forEach(sel=>{
-        const btn = qs(sel);
-        if(btn){
-          btn.addEventListener("click", (e)=>{
+      // Start buttons / cards
+      function wireStart(el){
+        if(!el) return;
+        el.addEventListener("click", (e)=>{
+          e.preventDefault();
+          const m = el.getAttribute("data-start") || "neu";
+          openModal(m);
+        });
+        el.addEventListener("keydown", (e)=>{
+          if(e.key === "Enter" || e.key === " "){
             e.preventDefault();
-            currentStep = 1;
-            if(thanks) thanks.hidden = true;
-            if(form) form.style.display = "";
-            setStep(1);
-            openModal();
-          });
-        }
-      });
+            const m = el.getAttribute("data-start") || "neu";
+            openModal(m);
+          }
+        });
+      }
+      qsa("[data-start]").forEach(wireStart);
 
+      // Close
       qsa("[data-close]", modal).forEach(el=>{
-        el.addEventListener("click", (e)=>{ e.preventDefault(); closeModal(); });
+        el.addEventListener("click",(e)=>{ e.preventDefault(); closeModal(); });
       });
       document.addEventListener("keydown",(e)=>{
-        if(e.key==="Escape" && modal?.classList.contains("is-open")) closeModal();
+        if(e.key==="Escape" && modal.classList.contains("is-open")) closeModal();
       });
 
+      // Next/Back delegation
       if(form){
         form.addEventListener("click",(e)=>{
           const t = e.target;
           if(t && t.hasAttribute("data-next")){
             e.preventDefault();
             if(!validate(currentStep)) return;
-            currentStep = Math.min(currentStep+1, 6);
-            setStep(currentStep);
+            setStep(currentStep + 1);
           }
           if(t && t.hasAttribute("data-back")){
             e.preventDefault();
-            currentStep = Math.max(currentStep-1, 1);
-            setStep(currentStep);
+            // Wenn mode=neu und zurück von Step 4 -> Step 2 (überspringt 3)
+            const mode = modeInput.value;
+            if(mode !== "check" && currentStep === 4){
+              setStep(2);
+            } else {
+              setStep(Math.max(currentStep - 1, 1));
+            }
           }
         });
 
         form.addEventListener("submit",(e)=>{
           e.preventDefault();
-          if(!validate(6)) return;
+          if(!validate(5)) return;
+          // Vorschau: Kein Versand
           form.style.display="none";
           if(thanks) thanks.hidden=false;
         });
