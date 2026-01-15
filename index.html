@@ -2,762 +2,466 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Wohngebäudeversicherung – Neu abschließen oder Beitrag prüfen</title>
-  <meta name="description" content="Wohngebäudeversicherung für Ihr Haus: Neu abschließen oder bestehenden Beitrag prüfen. In 2 Minuten Anfrage senden – kostenlos & unverbindlich." />
-  <meta name="robots" content="noindex,nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <style>
-    :root{
-      --bg:#f6f8fb;
-      --card:#ffffff;
-      --border:#e6ebf2;
-      --text:#0b1220;
-      --muted:#566277;
-      --primary:#1b76ff;
-      --primary2:#0ea5e9;
-      --green:#16a34a;
-      --greenSoft:#eaf8ef;
-      --blueSoft:#e9f3ff;
-      --shadow: 0 10px 30px rgba(16,24,40,.08);
-      --radius: 18px;
-      --radius2: 14px;
-      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0; font-family:var(--font); color:var(--text);
-      background:
-        radial-gradient(900px 420px at 15% 10%, #e9f3ff 0%, transparent 55%),
-        radial-gradient(900px 420px at 85% 10%, #eaf8ef 0%, transparent 55%),
-        linear-gradient(180deg, #ffffff, var(--bg));
-    }
-    a{color:var(--primary); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1020px; margin:0 auto; padding:0 18px}
+  <title>Wohngebäudeversicherung – Neu abschließen oder Beitrag prüfen | Wohngebäude-SparCheck</title>
+  <meta name="description" content="Wohngebäudeversicherung einfach & verständlich: Neu abschließen oder bestehenden Beitrag prüfen. Kostenlos & unverbindlich in 2 Minuten – Vergleich per E-Mail." />
 
-    /* Top minimal */
-    .topbar{
-      position:sticky; top:0; z-index:30;
-      background: rgba(255,255,255,.86);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid var(--border);
-    }
-    .topbar__inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:12px 0; gap:10px;
-    }
-    .brand{display:flex; align-items:center; gap:10px}
-    .brand__logo{
-      width:38px; height:38px; border-radius:12px;
-      background: linear-gradient(135deg, var(--primary), var(--primary2));
-      box-shadow: 0 10px 22px rgba(27,118,255,.20);
-      display:flex; align-items:center; justify-content:center;
-      color:#fff; font-weight:900;
-    }
-    .brand__name{font-weight:900; letter-spacing:.2px}
-    .brand__sub{display:block; font-size:12px; color:var(--muted); margin-top:2px}
-    .miniTrust{font-size:13px; color:var(--muted); text-align:right}
-    .miniTrust b{color:#0f6a2c}
+  <!-- Optional (später Domain einsetzen) -->
+  <!-- <link rel="canonical" href="https://DEINE-DOMAIN.de/" /> -->
 
-    /* Layout */
-    .card{
-      border:1px solid var(--border);
-      background:var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .hero{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:16px;
-      padding:18px 0 12px;
-      align-items:stretch;
-    }
-    .hero__left{padding:24px}
-    .hero__right{padding:24px}
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0ea5e9" />
 
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 12px; border-radius:999px;
-      border:1px solid #cfe2ff; background:var(--blueSoft);
-      color:#1b4fd6; font-size:13px; font-weight:800;
-      margin-bottom:12px;
-    }
-    h1{margin:8px 0 10px; font-size:38px; line-height:1.08}
-    .lead{margin:0 0 14px; color:var(--muted); font-size:16px; line-height:1.55}
-
-    .choiceGrid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
-      margin-top:14px;
-    }
-    .choice{
-      border:1px solid var(--border);
-      border-radius: 16px;
-      padding:16px;
-      background:#fff;
-      cursor:pointer;
-      transition: transform .08s ease, box-shadow .08s ease;
-    }
-    .choice:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 12px 24px rgba(16,24,40,.08);
-    }
-    .choice__top{display:flex; align-items:center; gap:10px; margin-bottom:8px}
-    .choice__icon{
-      width:38px; height:38px; border-radius:12px;
-      display:flex; align-items:center; justify-content:center;
-      background:#f3f6fb; font-size:18px;
-    }
-    .choice__title{font-weight:900; font-size:16px; margin:0}
-    .choice__text{margin:6px 0 12px; color:var(--muted); font-size:13.5px; line-height:1.45}
-    .choice__btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:11px 12px;
-      border-radius: 12px;
-      border:1px solid var(--border);
-      background:#fff;
-      font-weight:900;
-      cursor:pointer;
-      width:100%;
-    }
-    .choice__btn--primary{
-      border:none; color:#fff;
-      background: linear-gradient(135deg, var(--primary), var(--primary2));
-      box-shadow: 0 10px 22px rgba(27,118,255,.18);
-    }
-
-    .benefits{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:10px;
-      margin-top:14px;
-    }
-    .benefit{
-      border:1px solid var(--border);
-      background:#fbfcff;
-      border-radius: 14px;
-      padding:12px;
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.45;
-    }
-    .benefit b{color:var(--text)}
-
-    /* Right column trust */
-    .box{
-      border:1px solid #cfead6;
-      background: var(--greenSoft);
-      border-radius: 16px;
-      padding:14px;
-    }
-    .box h3{margin:0 0 8px; font-size:16px}
-    .box p{margin:0; color:var(--muted); line-height:1.5; font-size:13.5px}
-    .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
-    .chip{
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid #cfead6;
-      background:#fff;
-      font-size:13px;
-      font-weight:800;
-      color:#0f6a2c;
-    }
-
-    .covered{
-      margin-top:14px;
-      border:1px solid var(--border);
-      border-radius: 16px;
-      background:#fff;
-      padding:14px;
-    }
-    .covered h3{margin:0 0 8px; font-size:16px}
-    .tags{display:flex; flex-wrap:wrap; gap:8px}
-    .tag{
-      padding:8px 10px; border-radius:999px;
-      border:1px solid var(--border); background:#fbfcff;
-      font-size:13px; font-weight:800; color:#24324a;
-    }
-    .tag--muted{color:var(--muted); font-weight:700}
-
-    /* Footer minimal */
-    .footer{
-      margin-top:18px;
-      border-top:1px solid var(--border);
-      background:#fff;
-    }
-    .footer__inner{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:10px; flex-wrap:wrap;
-      padding:14px 0;
-      color:var(--muted);
-      font-size:13px;
-    }
-    .footer__links{display:flex; gap:12px}
-
-    /* Modal / Funnel */
-    .modal{position:fixed; inset:0; display:none; z-index:100}
-    .modal.is-open{display:block}
-    .modal__overlay{position:absolute; inset:0; background: rgba(11,18,32,.45); backdrop-filter: blur(4px)}
-    .modal__panel{
-      position:relative;
-      width:min(860px, calc(100% - 24px));
-      margin: 70px auto 24px;
-      border-radius: 18px;
-      border:1px solid var(--border);
-      background:#fff;
-      box-shadow: 0 26px 120px rgba(11,18,32,.22);
-      padding: 18px;
-      max-height: calc(100vh - 94px);
-      overflow:auto;
-    }
-    .modal__head{
-      display:flex; justify-content:space-between; gap:12px; align-items:flex-start;
-      border-bottom:1px solid var(--border);
-      padding-bottom:12px;
-    }
-    .modal__kicker{color:#0f6a2c; font-weight:900; font-size:13px}
-    .modal__title{margin:6px 0 0; font-size:18px}
-    .iconBtn{
-      border:1px solid var(--border);
-      background:#fff;
-      color:var(--text);
-      border-radius: 12px;
-      padding:10px 12px;
-      cursor:pointer;
-      font-weight:900;
-    }
-    .iconBtn:hover{background:#f3f6fb}
-
-    .stepBar{display:flex; gap:8px; padding:14px 0}
-    .stepDot{height:8px; flex:1; border-radius:999px; background:#eef2f8}
-    .stepDot.is-active{background: linear-gradient(135deg, var(--primary), var(--primary2))}
-
-    .form{margin-top:6px}
-    .step{display:none}
-    .step.is-active{display:block}
-
-    .label{display:block; margin:10px 0 6px; color:var(--muted); font-size:13px; font-weight:800}
-    .input{
-      width:100%;
-      padding:12px 12px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:#fff;
-      color:var(--text);
-      outline:none;
-    }
-    .input:focus{border-color: rgba(27,118,255,.45); box-shadow: 0 0 0 3px rgba(27,118,255,.12)}
-    .err{color:#c02626; font-size:13px; margin-top:6px; min-height:18px}
-
-    .row2{display:grid; grid-template-columns: 1fr 1fr; gap:10px}
-    .stepNav{display:flex; justify-content:space-between; gap:10px; margin-top:14px}
-
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:8px;
-      padding:12px 14px;
-      border-radius: 12px;
-      border:1px solid var(--border);
-      cursor:pointer;
-      font-weight:900;
-      color:var(--text);
-      background:#fff;
-      width:auto;
-    }
-    .btn:hover{background:#f3f6fb}
-    .btn--primary{
-      border:none; color:#fff;
-      background: linear-gradient(135deg, var(--primary), var(--primary2));
-      box-shadow: 0 10px 22px rgba(27,118,255,.18);
-    }
-
-    .resultBox{
-      border:1px solid #cfe2ff;
-      background: var(--blueSoft);
-      border-radius: 14px;
-      padding:12px;
-      margin-bottom:12px;
-    }
-    .resultBox__title{font-weight:900; color:#1b4fd6}
-    .resultBox__text{color:#334155; margin-top:4px; line-height:1.45}
-
-    .check{
-      display:flex; gap:10px; align-items:flex-start;
-      padding:12px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background:#fbfcff;
-    }
-    .check input{margin-top:3px}
-
-    @media (max-width: 980px){
-      .hero{grid-template-columns:1fr}
-      h1{font-size:32px}
-      .choiceGrid{grid-template-columns:1fr}
-      .benefits{grid-template-columns:1fr}
-      .row2{grid-template-columns:1fr}
-      .modal__panel{margin-top:54px}
-      .miniTrust{text-align:left}
-    }
-  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/app.js"></script>
 </head>
 
 <body>
-  <!-- Minimal header (kein Menü, keine Ablenkung) -->
-  <header class="topbar">
-    <div class="container topbar__inner">
+  <a class="skip" href="#main">Zum Inhalt springen</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
       <div class="brand">
-        <div class="brand__logo">🏠</div>
-        <div>
+        <div class="brand__mark" aria-hidden="true">🏠</div>
+        <div class="brand__text">
           <div class="brand__name">Wohngebäude-SparCheck</div>
-          <span class="brand__sub">Neu abschließen oder bestehenden Beitrag prüfen</span>
+          <div class="brand__tag">Neu abschließen oder Beitrag prüfen</div>
         </div>
       </div>
 
-      <div class="miniTrust">
-        <div><b>Kostenlos</b> & unverbindlich</div>
-        <div>2 Minuten • Datenschutz</div>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a class="nav__link" href="#so-funktionierts">So funktioniert’s</a>
+        <a class="nav__link" href="#leistungen">Leistungen</a>
+        <a class="nav__link" href="#faq">FAQ</a>
+
+        <!-- Unterseiten (optional – nicht ablenkend) -->
+        <div class="nav__dropdown">
+          <button class="nav__dropbtn" type="button" aria-expanded="false" aria-controls="navDrop">
+            Ratgeber
+            <span class="chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="nav__drop" id="navDrop">
+            <a href="kosten.html">Kosten</a>
+            <a href="beitragserhoehung.html">Beitragserhöhung</a>
+            <a href="elementar.html">Elementarschäden</a>
+            <a href="spezialfaelle.html">Spezialfälle</a>
+          </div>
+        </div>
+
+        <button class="nav__cta" type="button" id="openFunnelTop">Spar-Check starten</button>
+      </nav>
+
+      <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile" id="mobileNav" hidden>
+      <div class="container mobile__inner">
+        <a href="#so-funktionierts" class="mobile__link">So funktioniert’s</a>
+        <a href="#leistungen" class="mobile__link">Leistungen</a>
+        <a href="#faq" class="mobile__link">FAQ</a>
+        <div class="mobile__sep"></div>
+        <a href="kosten.html" class="mobile__link">Kosten</a>
+        <a href="beitragserhoehung.html" class="mobile__link">Beitragserhöhung</a>
+        <a href="elementar.html" class="mobile__link">Elementarschäden</a>
+        <a href="spezialfaelle.html" class="mobile__link">Spezialfälle</a>
+        <button class="btn btn--primary mobile__cta" type="button" id="openFunnelMobile">Spar-Check starten</button>
       </div>
     </div>
   </header>
 
-  <main class="container">
+  <!-- Main -->
+  <main id="main">
+    <!-- Hero -->
     <section class="hero">
-      <div class="hero__left card">
-        <div class="pill">✅ Wohngebäudeversicherung</div>
-        <h1>Absicherung fürs Haus – mit 2 klaren Optionen</h1>
-        <p class="lead">
-          Wählen Sie, was Sie vorhaben: <b>Neu abschließen</b> oder <b>bestehende Police prüfen</b>.
-          Sie erhalten anschließend einen passenden Vergleich – ohne Bindung.
-        </p>
-
-        <div class="choiceGrid">
-          <div class="choice" role="button" tabindex="0" data-start="neu">
-            <div class="choice__top">
-              <div class="choice__icon">🆕</div>
-              <div>
-                <p class="choice__title">Neu abschließen</p>
-                <div class="choice__text">Sie brauchen erstmals eine Wohngebäudeversicherung (z. B. Hauskauf / Neubau / Wechsel geplant).</div>
-              </div>
-            </div>
-            <button type="button" class="choice__btn choice__btn--primary">Jetzt neu anfragen</button>
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <div class="pill">
+            ✅ Kostenlos & unverbindlich · ⏱️ 2 Minuten · 🔒 Datenschutz
           </div>
 
-          <div class="choice" role="button" tabindex="0" data-start="check">
-            <div class="choice__top">
-              <div class="choice__icon">🔍</div>
-              <div>
-                <p class="choice__title">Bestehende prüfen</p>
-                <div class="choice__text">Sie haben schon eine Police und wollen prüfen, ob es <b>günstiger</b> geht – bei passendem Schutz.</div>
+          <h1 class="hero__title">
+            Absicherung fürs Haus – <span class="accent">mit 2 klaren Optionen</span>
+          </h1>
+
+          <p class="hero__sub">
+            Wählen Sie, was Sie vorhaben: <strong>neu abschließen</strong> oder <strong>bestehende Police prüfen</strong>.
+            Sie erhalten danach einen passenden Vergleich – ohne Bindung.
+          </p>
+
+          <div class="choice">
+            <article class="card choice__card">
+              <div class="choice__head">
+                <div class="choice__icon" aria-hidden="true">🆕</div>
+                <div>
+                  <h2 class="choice__title">Neu abschließen</h2>
+                  <p class="choice__text">Für Hauskauf, Neubau oder wenn Sie erstmals absichern möchten.</p>
+                </div>
               </div>
+              <ul class="bullets">
+                <li>Passender Schutz (Feuer, Leitungswasser, Sturm/Hagel)</li>
+                <li>Optional Elementar (z. B. Starkregen, Rückstau)</li>
+                <li>Vergleich per E-Mail</li>
+              </ul>
+              <button class="btn btn--primary" type="button" id="startNew">
+                Jetzt neu anfragen
+              </button>
+            </article>
+
+            <article class="card choice__card">
+              <div class="choice__head">
+                <div class="choice__icon" aria-hidden="true">🔎</div>
+                <div>
+                  <h2 class="choice__title">Beitrag prüfen</h2>
+                  <p class="choice__text">Wenn Sie bereits versichert sind und prüfen möchten, ob es günstiger geht.</p>
+                </div>
+              </div>
+              <ul class="bullets">
+                <li>Ideal bei Beitragserhöhung</li>
+                <li>Preis/Leistung verbessern</li>
+                <li>Schnell & verständlich</li>
+              </ul>
+              <button class="btn btn--ghost" type="button" id="startCheck">
+                Beitrag prüfen
+              </button>
+            </article>
+          </div>
+
+          <div class="trustrow">
+            <div class="trustrow__item">
+              <span class="dot dot--blue"></span>
+              Klarer Ablauf statt Info-Chaos
             </div>
-            <button type="button" class="choice__btn">Beitrag prüfen</button>
+            <div class="trustrow__item">
+              <span class="dot dot--green"></span>
+              Keine Pflicht – nur Vergleich
+            </div>
+            <div class="trustrow__item">
+              <span class="dot dot--amber"></span>
+              Individuell nach Gebäude-Daten
+            </div>
           </div>
         </div>
 
-        <div class="benefits">
-          <div class="benefit"><b>Fokus:</b> Lead-Check statt Informations-Seite. Keine Ablenkung – direkte Anfrage.</div>
-          <div class="benefit"><b>Wichtig:</b> Wir achten auf korrekten Versicherungswert (Unterversicherung vermeiden).</div>
-          <div class="benefit"><b>Typisch versichert:</b> Feuer, Leitungswasser, Sturm/Hagel.</div>
-          <div class="benefit"><b>Optional:</b> Elementar (Starkregen/Rückstau/Überschwemmung) je nach Region.</div>
-        </div>
+        <aside class="hero__right">
+          <div class="card heroBox">
+            <div class="heroBox__top">
+              <div class="heroBox__badge">So läuft’s ab</div>
+              <h3 class="heroBox__title">In 4 Schritten zum Vergleich</h3>
+            </div>
+
+            <ol class="steps">
+              <li><strong>Gebäude-Eckdaten</strong> (Typ, PLZ, Baujahr, Fläche)</li>
+              <li><strong>Optional</strong> (bei Check: aktueller Beitrag/Anbieter)</li>
+              <li><strong>Kontaktdaten</strong> (damit wir den Vergleich senden können)</li>
+              <li><strong>Vergleich erhalten</strong> (per E-Mail)</li>
+            </ol>
+
+            <div class="heroBox__cta">
+              <button class="btn btn--primary btn--wide" type="button" id="openFunnelHero">
+                Spar-Check starten
+              </button>
+              <p class="heroBox__fine">
+                Hinweis: Das Sparpotenzial hängt u. a. von PLZ, Baujahr, Wohnfläche, Vorschäden, Deckung und Selbstbeteiligung ab.
+              </p>
+            </div>
+          </div>
+
+          <div class="card coverBox" id="leistungen">
+            <div class="coverBox__head">
+              <h3 class="coverBox__title">Worum geht’s genau?</h3>
+              <p class="coverBox__sub">Die wichtigsten Bausteine – verständlich erklärt.</p>
+            </div>
+
+            <div class="chips">
+              <span class="chip">🔥 Feuer</span>
+              <span class="chip">💧 Leitungswasser</span>
+              <span class="chip">🌪️ Sturm/Hagel</span>
+              <span class="chip chip--soft">🌧️ Elementar (optional)</span>
+            </div>
+
+            <p class="coverBox__text">
+              Ziel: Ihr Haus passend absichern – und bei bestehender Police prüfen, ob Preis/Leistung besser geht.
+            </p>
+          </div>
+        </aside>
       </div>
-
-      <aside class="hero__right card">
-        <div class="box">
-          <h3>So läuft’s ab</h3>
-          <p>
-            1) Gebäude-Eckdaten → 2) (bei Check) aktueller Beitrag/Anbieter → 3) Kontaktdaten →
-            4) Vergleich erhalten.
-          </p>
-          <div class="chips">
-            <span class="chip">Kostenlos</span>
-            <span class="chip">Unverbindlich</span>
-            <span class="chip">Datenschutz</span>
-          </div>
-        </div>
-
-        <div class="covered">
-          <h3>Worum geht’s genau?</h3>
-          <div class="tags">
-            <span class="tag">🔥 Feuer</span>
-            <span class="tag">💧 Leitungswasser</span>
-            <span class="tag">🌬️ Sturm/Hagel</span>
-            <span class="tag tag--muted">🌧️ Elementar optional</span>
-          </div>
-          <p style="margin:10px 0 0; color:var(--muted); line-height:1.55; font-size:13.5px;">
-            Ziel: Ihr Haus passend absichern – und prüfen, ob Preis/Leistung verbessert werden kann.
-          </p>
-        </div>
-      </aside>
     </section>
 
-    <footer class="footer">
-      <div class="container footer__inner">
-        <div>© 2026 Wohngebäude-SparCheck • Vorschau-Modus (noindex)</div>
+    <!-- How it works -->
+    <section class="section" id="so-funktionierts">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">So funktioniert der Spar-Check</h2>
+          <p class="section__sub">
+            Fokus: Lead-Generierung ohne Ablenkung. Sie entscheiden: Neu abschließen oder Beitrag prüfen.
+          </p>
+        </div>
+
+        <div class="grid3">
+          <div class="card feature">
+            <div class="feature__icon" aria-hidden="true">🧾</div>
+            <h3 class="feature__title">Eckdaten eingeben</h3>
+            <p class="feature__text">Gebäudetyp, PLZ, Baujahr und Wohnfläche – damit der Vergleich passt.</p>
+          </div>
+          <div class="card feature">
+            <div class="feature__icon" aria-hidden="true">⚡</div>
+            <h3 class="feature__title">Optional: Beitrag/Anbieter</h3>
+            <p class="feature__text">Wenn Sie bereits versichert sind, hilft das beim Einspar-Check.</p>
+          </div>
+          <div class="card feature">
+            <div class="feature__icon" aria-hidden="true">📩</div>
+            <h3 class="feature__title">Vergleich per E-Mail</h3>
+            <p class="feature__text">Sie erhalten den Vergleich – unverbindlich. Kein Abschlusszwang.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--soft" id="faq">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Häufige Fragen</h2>
+          <p class="section__sub">Kurz & klar – damit Sie schnell entscheiden können.</p>
+        </div>
+
+        <div class="faq">
+          <details class="faq__item">
+            <summary>Was ist bei der Wohngebäudeversicherung typischerweise versichert?</summary>
+            <div class="faq__body">
+              Typisch sind Schäden durch Feuer, Leitungswasser sowie Sturm/Hagel. Elementarschäden (z. B. Starkregen, Überschwemmung, Rückstau) sind oft ein Zusatzbaustein.
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Kann ich eine bestehende Police wirklich sinnvoll prüfen lassen?</summary>
+            <div class="faq__body">
+              Ja – besonders bei Beitragserhöhungen oder wenn sich die Wohnsituation geändert hat. Wichtig sind u. a. Versicherungssumme, Unterversicherungsverzicht, grobe Fahrlässigkeit und passende Zusatzleistungen.
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Wie schnell bekomme ich den Vergleich?</summary>
+            <div class="faq__body">
+              Nach dem Spar-Check senden wir den Vergleich per E-Mail. Je nach Datenlage kann es sehr schnell gehen – oder wir melden uns kurz, falls Angaben fehlen.
+            </div>
+          </details>
+        </div>
+
+        <div class="center">
+          <button class="btn btn--primary" type="button" id="openFunnelFaq">Spar-Check starten</button>
+          <a class="btn btn--ghost" href="spezialfaelle.html">Spezialfälle ansehen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="footer__brand">© <span id="year"></span> Wohngebäude-SparCheck</div>
         <div class="footer__links">
           <a href="impressum.html">Impressum</a>
+          <span class="sep">·</span>
           <a href="datenschutz.html">Datenschutz</a>
         </div>
       </div>
-    </footer>
-  </main>
+      <div class="footer__right">
+        <span class="footer__note">Kostenlos & unverbindlich</span>
+      </div>
+    </div>
+  </footer>
 
-  <!-- MODAL / FUNNEL -->
-  <div class="modal" id="sparcheckModal" aria-hidden="true">
-    <div class="modal__overlay" data-close></div>
+  <!-- Funnel Modal -->
+  <div class="modal" id="funnelModal" role="dialog" aria-modal="true" aria-labelledby="funnelTitle" hidden>
+    <div class="modal__backdrop" data-close="true"></div>
 
-    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="sparTitle">
+    <div class="modal__panel" role="document">
       <div class="modal__head">
         <div>
-          <div class="modal__kicker">✅ Anfrage – kostenlos & unverbindlich</div>
-          <h2 id="sparTitle" class="modal__title">
-            <span id="modeTitle">Bitte kurz ausfüllen</span>
-          </h2>
+          <h2 class="modal__title" id="funnelTitle">Spar-Check starten</h2>
+          <p class="modal__sub">Wählen Sie Option & geben Sie die wichtigsten Eckdaten an.</p>
         </div>
-        <button type="button" class="iconBtn" data-close aria-label="Schließen">✕</button>
+        <button class="iconbtn" type="button" aria-label="Schließen" data-close="true">✕</button>
       </div>
 
-      <div class="stepBar" aria-hidden="true">
-        <div class="stepDot is-active" data-dot="1"></div>
-        <div class="stepDot" data-dot="2"></div>
-        <div class="stepDot" data-dot="3"></div>
-        <div class="stepDot" data-dot="4"></div>
-        <div class="stepDot" data-dot="5"></div>
+      <div class="progress" aria-hidden="true">
+        <div class="progress__bar" id="progressBar"></div>
       </div>
 
-      <form id="leadForm" class="form" method="POST" action="#">
-        <!-- Hidden mode -->
-        <input type="hidden" id="mode" name="modus" value="neu" />
+      <form id="leadForm" novalidate>
+        <!-- Step 1: Choose flow -->
+        <section class="step" data-step="1">
+          <h3 class="step__title">1) Was möchten Sie tun?</h3>
 
-        <!-- Step 1: Gebäudetyp + Nutzung -->
-        <section class="step is-active" data-step="1">
-          <label class="label">Gebäudetyp</label>
-          <select class="input" name="gebaeudetyp" id="gebaeudetyp" required>
-            <option value="">Bitte wählen…</option>
-            <option>Einfamilienhaus (EFH)</option>
-            <option>Doppelhaushälfte (DHH)</option>
-            <option>Reihenhaus</option>
-            <option>Mehrfamilienhaus (MFH)</option>
-            <option>Ferien-/Wochenendhaus</option>
-            <option>Fachwerkhaus</option>
-            <option>Denkmalgeschützte Immobilie</option>
-            <option>Reetdachhaus</option>
-            <option>Sonstiges</option>
-          </select>
-          <div class="err" data-err="gebaeudetyp"></div>
+          <div class="radioCards">
+            <label class="radioCard">
+              <input type="radio" name="flow" value="new" checked />
+              <span class="radioCard__body">
+                <span class="radioCard__title">Neu abschließen</span>
+                <span class="radioCard__text">Wenn Sie erstmals absichern oder neu starten möchten.</span>
+              </span>
+            </label>
 
-          <label class="label" style="margin-top:12px;">PLZ</label>
-          <input class="input" name="plz" id="plz" inputmode="numeric" placeholder="z. B. 10115" required />
-          <div class="err" data-err="plz"></div>
+            <label class="radioCard">
+              <input type="radio" name="flow" value="check" />
+              <span class="radioCard__body">
+                <span class="radioCard__title">Beitrag prüfen</span>
+                <span class="radioCard__text">Wenn Sie bereits versichert sind und vergleichen möchten.</span>
+              </span>
+            </label>
+          </div>
 
-          <div class="stepNav">
-            <button type="button" class="btn" data-close>Abbrechen</button>
-            <button type="button" class="btn btn--primary" data-next>Weiter</button>
+          <div class="step__nav">
+            <button class="btn btn--primary" type="button" data-next>Weiter</button>
           </div>
         </section>
 
-        <!-- Step 2: Baujahr / Wohnfläche -->
-        <section class="step" data-step="2">
-          <div class="row2">
-            <div>
-              <label class="label">Baujahr</label>
-              <input class="input" name="baujahr" id="baujahr" inputmode="numeric" placeholder="z. B. 1998" required />
-              <div class="err" data-err="baujahr"></div>
+        <!-- Step 2: Building basics -->
+        <section class="step" data-step="2" hidden>
+          <h3 class="step__title">2) Gebäude-Eckdaten</h3>
+
+          <div class="grid2">
+            <div class="field">
+              <label for="buildingType">Gebäudetyp</label>
+              <select id="buildingType" name="buildingType" required>
+                <option value="">Bitte wählen…</option>
+                <option>Einfamilienhaus</option>
+                <option>Doppelhaushälfte</option>
+                <option>Reihenhaus</option>
+                <option>Mehrfamilienhaus</option>
+                <option>Ferienhaus / Wochenendhaus</option>
+                <option>Sonstiges</option>
+              </select>
+              <div class="error" data-error-for="buildingType"></div>
             </div>
-            <div>
-              <label class="label">Wohnfläche (m²)</label>
-              <input class="input" name="wohnflaeche" id="wohnflaeche" inputmode="numeric" placeholder="z. B. 120" required />
-              <div class="err" data-err="wohnflaeche"></div>
+
+            <div class="field">
+              <label for="plz">PLZ</label>
+              <input id="plz" name="plz" inputmode="numeric" placeholder="z. B. 10115" maxlength="5" required />
+              <div class="error" data-error-for="plz"></div>
+            </div>
+
+            <div class="field">
+              <label for="yearBuilt">Baujahr</label>
+              <input id="yearBuilt" name="yearBuilt" inputmode="numeric" placeholder="z. B. 1998" maxlength="4" required />
+              <div class="error" data-error-for="yearBuilt"></div>
+            </div>
+
+            <div class="field">
+              <label for="livingSpace">Wohnfläche (m²)</label>
+              <input id="livingSpace" name="livingSpace" inputmode="numeric" placeholder="z. B. 140" required />
+              <div class="error" data-error-for="livingSpace"></div>
             </div>
           </div>
 
-          <label class="label" style="margin-top:12px;">Elementar gewünscht / vorhanden?</label>
-          <select class="input" name="elementar" id="elementarSel">
-            <option value="">Bitte wählen…</option>
-            <option value="ja">Ja</option>
-            <option value="nein">Nein</option>
-            <option value="unsicher">Weiß ich nicht</option>
-          </select>
-
-          <div class="stepNav">
-            <button type="button" class="btn" data-back>Zurück</button>
-            <button type="button" class="btn btn--primary" data-next>Weiter</button>
+          <div class="step__nav">
+            <button class="btn btn--ghost" type="button" data-prev>Zurück</button>
+            <button class="btn btn--primary" type="button" data-next>Weiter</button>
           </div>
         </section>
 
-        <!-- Step 3: Nur wenn "check" -> aktueller Anbieter / Beitrag -->
-        <section class="step" data-step="3" id="stepCheckOnly">
-          <div class="resultBox">
-            <div class="resultBox__title">🔍 Bestehende Police prüfen</div>
-            <div class="resultBox__text">
-              Wenn Sie den aktuellen Beitrag kennen, können wir gezielter vergleichen. (Optional, aber empfohlen.)
+        <!-- Step 3: Existing policy (only for check) -->
+        <section class="step" data-step="3" hidden>
+          <h3 class="step__title">3) Bestehende Police (optional, aber hilfreich)</h3>
+          <p class="step__hint">Nur wenn Sie „Beitrag prüfen“ gewählt haben. Bei „Neu abschließen“ überspringen wir diesen Schritt.</p>
+
+          <div class="grid2">
+            <div class="field">
+              <label for="currentPremium">Aktueller Jahresbeitrag (€)</label>
+              <input id="currentPremium" name="currentPremium" inputmode="numeric" placeholder="z. B. 800" />
+              <div class="error" data-error-for="currentPremium"></div>
+            </div>
+
+            <div class="field">
+              <label for="currentInsurer">Aktueller Anbieter</label>
+              <input id="currentInsurer" name="currentInsurer" placeholder="z. B. HUK, Allianz …" />
+              <div class="error" data-error-for="currentInsurer"></div>
             </div>
           </div>
 
-          <label class="label">Aktueller Anbieter (optional)</label>
-          <input class="input" name="aktueller_anbieter" id="anbieter" placeholder="z. B. HUK, Allianz, AXA…" />
-
-          <label class="label" style="margin-top:12px;">Aktueller Jahresbeitrag (optional)</label>
-          <input class="input" name="jahresbeitrag" id="jahresbeitrag" inputmode="numeric" placeholder="z. B. 800" />
-
-          <div class="stepNav">
-            <button type="button" class="btn" data-back>Zurück</button>
-            <button type="button" class="btn btn--primary" data-next>Weiter</button>
+          <div class="step__nav">
+            <button class="btn btn--ghost" type="button" data-prev>Zurück</button>
+            <button class="btn btn--primary" type="button" data-next>Weiter</button>
           </div>
         </section>
 
-        <!-- Step 4: Kontaktdaten -->
-        <section class="step" data-step="4">
-          <div class="resultBox">
-            <div class="resultBox__title">📩 Wohin dürfen wir den Vergleich senden?</div>
-            <div class="resultBox__text" id="contactHint">
-              Bitte Name, E-Mail und Telefon – damit wir Rückfragen klären und den Vergleich zustellen können.
+        <!-- Step 4: Lead capture -->
+        <section class="step" data-step="4" hidden>
+          <h3 class="step__title">4) Wohin dürfen wir den Vergleich senden?</h3>
+
+          <div class="grid2">
+            <div class="field">
+              <label for="fullName">Name</label>
+              <input id="fullName" name="fullName" placeholder="Vor- und Nachname" required />
+              <div class="error" data-error-for="fullName"></div>
+            </div>
+
+            <div class="field">
+              <label for="email">E-Mail</label>
+              <input id="email" name="email" type="email" placeholder="name@mail.de" required />
+              <div class="error" data-error-for="email"></div>
+            </div>
+
+            <div class="field">
+              <label for="phone">Telefon</label>
+              <input id="phone" name="phone" inputmode="tel" placeholder="z. B. 0176 12345678" required />
+              <div class="error" data-error-for="phone"></div>
+            </div>
+
+            <div class="field">
+              <label for="notes">Hinweise (optional)</label>
+              <input id="notes" name="notes" placeholder="z. B. Denkmal, Reetdach, Vorschaden …" />
             </div>
           </div>
 
-          <label class="label">Name</label>
-          <input class="input" name="name" id="name" placeholder="Vor- und Nachname" required />
-          <div class="err" data-err="name"></div>
-
-          <div class="row2">
-            <div>
-              <label class="label">E-Mail</label>
-              <input class="input" name="email" id="email" type="email" placeholder="name@mail.de" required />
-              <div class="err" data-err="email"></div>
-            </div>
-            <div>
-              <label class="label">Telefon</label>
-              <input class="input" name="telefon" id="telefon" inputmode="tel" placeholder="z. B. 0176 12345678" required />
-              <div class="err" data-err="telefon"></div>
-            </div>
-          </div>
-
-          <div class="stepNav">
-            <button type="button" class="btn" data-back>Zurück</button>
-            <button type="button" class="btn btn--primary" data-next>Weiter</button>
-          </div>
-        </section>
-
-        <!-- Step 5: DSGVO + Submit -->
-        <section class="step" data-step="5">
           <label class="check">
-            <input type="checkbox" id="dsgvo" required />
+            <input type="checkbox" id="consent" required />
             <span>
-              Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und bin einverstanden.
+              Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und bin einverstanden,
+              dass meine Angaben zur Kontaktaufnahme verarbeitet werden.
             </span>
           </label>
-          <div class="err" data-err="dsgvo"></div>
+          <div class="error" data-error-for="consent"></div>
 
-          <p style="margin:10px 0 0; color:var(--muted); font-size:13.5px; line-height:1.5;">
-            Vorschau-Modus: Es wird nichts versendet. (Später kannst du hier Formspree/IONOS-Mail einbinden.)
+          <div class="step__nav">
+            <button class="btn btn--ghost" type="button" data-prev>Zurück</button>
+            <button class="btn btn--primary" type="submit" id="submitBtn">Anfrage senden</button>
+          </div>
+
+          <p class="fineprint">
+            Keine Sorge: Das ist eine <strong>kostenlose</strong> und <strong>unverbindliche</strong> Anfrage – kein Abschlusszwang.
           </p>
+        </section>
 
-          <div class="stepNav">
-            <button type="button" class="btn" data-back>Zurück</button>
-            <button type="submit" class="btn btn--primary" id="submitBtn">Anfrage senden</button>
+        <!-- Step 5: Thank you -->
+        <section class="step" data-step="5" hidden>
+          <div class="thanks">
+            <div class="thanks__icon" aria-hidden="true">✅</div>
+            <h3 class="thanks__title">Danke! Anfrage ist eingegangen.</h3>
+            <p class="thanks__text">
+              Wir senden Ihnen den Vergleich per E-Mail. Wenn Rückfragen nötig sind, melden wir uns kurz.
+            </p>
+
+            <div class="thanks__box">
+              <div class="thanks__row"><strong>Status:</strong> <span id="thanksStatus">Vorschau</span></div>
+              <div class="thanks__row"><strong>Nächster Schritt:</strong> E-Mail-Vergleich erhalten</div>
+            </div>
+
+            <div class="step__nav">
+              <button class="btn btn--primary" type="button" data-close="true">Schließen</button>
+              <button class="btn btn--ghost" type="button" id="newRequest">Neue Anfrage</button>
+            </div>
           </div>
         </section>
       </form>
-
-      <div class="card" id="thanks" hidden style="border:1px solid var(--border); box-shadow:none; margin-top:14px; padding:14px; border-radius:16px; background:#fbfcff;">
-        <div style="font-weight:900; font-size:16px;">Danke! ✅</div>
-        <div style="color:var(--muted); margin-top:6px; line-height:1.5;">
-          Vorschau-Modus: Anfrage ist vorbereitet (keine Übertragung).
-        </div>
-        <div style="margin-top:12px;">
-          <button type="button" class="btn btn--primary" data-close>Schließen</button>
-        </div>
-      </div>
-
     </div>
   </div>
-
-  <script>
-    (function(){
-      const qs  = (s, el=document) => el.querySelector(s);
-      const qsa = (s, el=document) => Array.from(el.querySelectorAll(s));
-
-      const modal = qs("#sparcheckModal");
-      const form  = qs("#leadForm");
-      const thanks = qs("#thanks");
-      const modeInput = qs("#mode");
-      const modeTitle = qs("#modeTitle");
-      const stepCheckOnly = qs("#stepCheckOnly");
-      const submitBtn = qs("#submitBtn");
-
-      let currentStep = 1;
-
-      function openModal(mode){
-        // mode: "neu" oder "check"
-        modeInput.value = mode;
-        modeTitle.textContent = (mode === "check")
-          ? "Beitrag prüfen – kurze Angaben"
-          : "Neu abschließen – kurze Angaben";
-
-        // Step 3 (check-only) ein/aus
-        if(mode === "check"){
-          stepCheckOnly.style.display = ""; // normal
-        } else {
-          stepCheckOnly.style.display = "none"; // überspringen
-        }
-
-        // Reset
-        currentStep = 1;
-        if(thanks) thanks.hidden = true;
-        if(form) form.style.display = "";
-        setStep(1);
-
-        modal.classList.add("is-open");
-        modal.setAttribute("aria-hidden","false");
-        document.body.style.overflow="hidden";
-      }
-
-      function closeModal(){
-        modal.classList.remove("is-open");
-        modal.setAttribute("aria-hidden","true");
-        document.body.style.overflow="";
-      }
-
-      function setDot(step){
-        qsa(".stepDot").forEach(d=>d.classList.remove("is-active"));
-        const dot = qs(`.stepDot[data-dot="${step}"]`);
-        if(dot) dot.classList.add("is-active");
-      }
-
-      function setStep(step){
-        // Wenn mode=neu und step=3, überspringen
-        const mode = modeInput.value;
-        if(mode !== "check" && step === 3) step = 4;
-
-        qsa(".step", modal).forEach(s=>s.classList.remove("is-active"));
-        const st = qs(`.step[data-step="${step}"]`, modal);
-        if(st) st.classList.add("is-active");
-        currentStep = step;
-        setDot(step);
-
-        const panel = qs(".modal__panel", modal);
-        if(panel) panel.scrollTop = 0;
-
-        // Button Text im letzten Schritt leicht anpassen
-        if(step === 5){
-          submitBtn.textContent = (mode === "check") ? "Vergleich anfordern" : "Neu-Angebot anfordern";
-        }
-      }
-
-      function setErr(key,msg){
-        const box = qs(`[data-err="${key}"]`, modal);
-        if(box) box.textContent = msg || "";
-      }
-
-      function validPlz(v){ return /^[0-9]{5}$/.test(String(v||"").trim()); }
-      function validYear(v){
-        const n=Number(String(v||"").trim()), y=new Date().getFullYear();
-        return Number.isFinite(n) && n>=1600 && n<=y;
-      }
-      function validArea(v){
-        const n=Number(String(v||"").trim());
-        return Number.isFinite(n) && n>=10 && n<=2000;
-      }
-      function validName(v){
-        const s=String(v||"").trim();
-        return s.length>=3 && s.includes(" ");
-      }
-      function validEmail(v){ return /^\S+@\S+\.\S+$/.test(String(v||"").trim()); }
-      function validPhone(v){
-        const s=String(v||"").trim().replace(/\s+/g,"");
-        return /^[+0-9()\-]{7,}$/.test(s);
-      }
-
-      function validate(step){
-        ["gebaeudetyp","plz","baujahr","wohnflaeche","name","email","telefon","dsgvo"].forEach(k=>setErr(k,""));
-
-        if(step===1){
-          const g=qs("#gebaeudetyp")?.value;
-          const p=qs("#plz")?.value;
-          if(!g){ setErr("gebaeudetyp","Bitte Gebäudetyp auswählen."); return false; }
-          if(!validPlz(p)){ setErr("plz","Bitte eine gültige 5-stellige PLZ eingeben."); return false; }
-        }
-        if(step===2){
-          const y=qs("#baujahr")?.value;
-          const a=qs("#wohnflaeche")?.value;
-          if(!validYear(y)){ setErr("baujahr","Bitte gültiges Baujahr eingeben (z. B. 1998)."); return false; }
-          if(!validArea(a)){ setErr("wohnflaeche","Bitte Wohnfläche in m² eingeben (z. B. 120)."); return false; }
-        }
-        if(step===4){
-          const n=qs("#name")?.value;
-          const e=qs("#email")?.value;
-          const t=qs("#telefon")?.value;
-          if(!validName(n)){ setErr("name","Bitte Vor- und Nachname eingeben."); return false; }
-          if(!validEmail(e)){ setErr("email","Bitte gültige E-Mail eingeben."); return false; }
-          if(!validPhone(t)){ setErr("telefon","Bitte gültige Telefonnummer eingeben."); return false; }
-        }
-        if(step===5){
-          const ok=qs("#dsgvo")?.checked;
-          if(!ok){ setErr("dsgvo","Bitte Datenschutz-Zustimmung setzen."); return false; }
-        }
-        return true;
-      }
-
-      // Start buttons / cards
-      function wireStart(el){
-        if(!el) return;
-        el.addEventListener("click", (e)=>{
-          e.preventDefault();
-          const m = el.getAttribute("data-start") || "neu";
-          openModal(m);
-        });
-        el.addEventListener("keydown", (e)=>{
-          if(e.key === "Enter" || e.key === " "){
-            e.preventDefault();
-            const m = el.getAttribute("data-start") || "neu";
-            openModal(m);
-          }
-        });
-      }
-      qsa("[data-start]").forEach(wireStart);
-
-      // Close
-      qsa("[data-close]", modal).forEach(el=>{
-        el.addEventListener("click",(e)=>{ e.preventDefault(); closeModal(); });
-      });
-      document.addEventListener("keydown",(e)=>{
-        if(e.key==="Escape" && modal.classList.contains("is-open")) closeModal();
-      });
-
-      // Next/Back delegation
-      if(form){
-        form.addEventListener("click",(e)=>{
-          const t = e.target;
-          if(t && t.hasAttribute("data-next")){
-            e.preventDefault();
-            if(!validate(currentStep)) return;
-            setStep(currentStep + 1);
-          }
-          if(t && t.hasAttribute("data-back")){
-            e.preventDefault();
-            // Wenn mode=neu und zurück von Step 4 -> Step 2 (überspringt 3)
-            const mode = modeInput.value;
-            if(mode !== "check" && currentStep === 4){
-              setStep(2);
-            } else {
-              setStep(Math.max(currentStep - 1, 1));
-            }
-          }
-        });
-
-        form.addEventListener("submit",(e)=>{
-          e.preventDefault();
-          if(!validate(5)) return;
-          // Vorschau: Kein Versand
-          form.style.display="none";
-          if(thanks) thanks.hidden=false;
-        });
-      }
-    })();
-  </script>
 </body>
 </html>
